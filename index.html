@@ -63,16 +63,20 @@ details[open]>summary>.toggle::before{content:"−"}
 .ledger-section + .ledger-section{margin-top:10px}
 .ledger-section h3{font:700 20px/1.3 var(--display);color:var(--tone);margin-bottom:10px}
 .district-metrics ul,.metrics{list-style:none;padding:0;margin:0}
-.district-metrics ul{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.district-metrics ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 .district-metrics li{padding:8px 10px;background:var(--tint);display:grid;gap:3px;font-size:14px}
+.district-metrics li>span{font-weight:650}
 .district-metrics strong{font:700 25px/1.2 var(--display);color:var(--tone)}
 .metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .metric{background:#f7f3eb;border:1px solid var(--line);padding:9px 10px;min-width:0}
-.metric h4{font-size:14px;line-height:1.5;margin:0 0 6px}
+.metric .metric-name{color:var(--ink);font-size:14px;font-weight:650;line-height:1.5;margin:0 0 6px}
 .metric dl{display:grid;grid-template-columns:1fr 1fr;margin:0 0 4px}
-.metric dt,.metric p,.metric-key{font-size:13px;color:var(--muted)}
+.metric dt,.metric p,.metric-key,.metric-meta{font-size:13px;color:var(--muted)}
 .metric dd{font-size:16px;font-weight:680;margin:0;color:var(--tone)}
-.metric-key{margin-top:9px}
+.metric-key{margin-top:7px}
+.metric-subject{font-weight:650;margin-bottom:8px}
+.metric-source{margin:0 0 7px;font-size:15px;color:var(--tone)}
+.metric-key+.metric-source{margin-top:16px}
 footer{border-top:1px solid var(--line);padding:13px clamp(16px,5vw,45px) max(19px,env(safe-area-inset-bottom));font-size:14px}
 footer a{color:var(--wine);text-underline-offset:4px}
 @media(max-width:620px){
@@ -94,6 +98,8 @@ footer a{color:var(--wine);text-underline-offset:4px}
  .source-card cite{flex-basis:100%;font-size:13px}
  .source-card blockquote p{font-size:15px}
  .metrics{grid-template-columns:1fr}
+ .district-metrics ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .district-metrics li:first-child{grid-column:1/-1}
  .ledger-content,.ledger-section{padding:9px}
 }
 @supports (interpolate-size:allow-keywords){
@@ -245,49 +251,79 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <summary class="ledger-head"><strong>指标</strong><span class="toggle" aria-hidden="true"></span></summary>
 <div class="ledger-content">
 <section class="ledger-section district-metrics">
-<h3>朝阳区 2030 年约束性指标</h3>
-<ul><li><span>食品安全抽检合格率</span><strong>&gt;98.7%</strong></li><li><span>药品抽检合格率</span><strong>&gt;99%</strong></li></ul>
+<h3>朝阳区纲要 · 2030 年目标</h3>
+<ul><li><span>每万人口高价值发明专利拥有量</span><strong>240 件左右</strong>
+<p class="metric-meta">预期性</p></li><li><span>食品安全抽检合格率</span><strong>&gt;98.7%</strong>
+<p class="metric-meta">约束性</p></li><li><span>药品抽检合格率</span><strong>&gt;99%</strong>
+<p class="metric-meta">约束性</p></li></ul>
+<p class="metric-key">PDF 第 22–23 页</p>
 </section>
 <section class="ledger-section">
-<h3>市局规划 12 项主要指标</h3>
-<ul class="metrics">
-<li class="metric"><h4>广告业务收入</h4>
-<dl><div><dt>2025 年</dt><dd>—</dd></div><div><dt>2030 年</dt><dd>&gt;5000</dd></div></dl>
-<p>亿元 · 预期性</p></li>
-<li class="metric"><h4>质检技术服务业营业额</h4>
-<dl><div><dt>2025 年</dt><dd>326</dd></div><div><dt>2030 年</dt><dd>≥400</dd></div></dl>
-<p>亿元 · 预期性</p></li>
-<li class="metric"><h4>新发布地方计量技术规范</h4>
-<dl><div><dt>2025 年</dt><dd>【170】</dd></div><div><dt>2030 年</dt><dd>【200】</dd></div></dl>
-<p>个 · 预期性</p></li>
-<li class="metric"><h4>牵头或参与制定国家标准</h4>
-<dl><div><dt>2025 年</dt><dd>【7682】</dd></div><div><dt>2030 年</dt><dd>【7800】</dd></div></dl>
-<p>项 · 预期性</p></li>
-<li class="metric"><h4>诉求即办直通车单位</h4>
-<dl><div><dt>2025 年</dt><dd>72</dd></div><div><dt>2030 年</dt><dd>100</dd></div></dl>
-<p>个 · 预期性</p></li>
-<li class="metric"><h4>食品安全抽检合格率</h4>
+<h3>知识产权上位指标</h3>
+<p class="metric-subject">每万人口高价值发明专利拥有量</p>
+<ul class="metrics"><li class="metric">
+<p class="metric-name">国家纲要</p>
+<dl><div><dt>2025 年</dt><dd>16</dd></div><div><dt>2030 年</dt><dd>&gt;22</dd></div></dl>
+<p>件 · 预期性 · PDF 第 15 页</p></li><li class="metric">
+<p class="metric-name">北京市纲要</p>
+<dl><div><dt>2025 年</dt><dd>180.7</dd></div><div><dt>2030 年</dt><dd>240 左右</dd></div></dl>
+<p>件 · 预期性 · PDF 第 25 页</p></li></ul>
+</section>
+<section class="ledger-section">
+<h3>食品药品市级指标</h3>
+<h4 class="metric-source">北京市纲要 · PDF 第 26 页</h4>
+<ul class="metrics"><li class="metric">
+<p class="metric-name">食品安全抽检合格率</p>
+<dl><div><dt>2025 年</dt><dd>&gt;98.5*</dd></div><div><dt>2030 年</dt><dd>&gt;98.7</dd></div></dl>
+<p>% · 约束性</p></li><li class="metric">
+<p class="metric-name">药品抽检合格率</p>
+<dl><div><dt>2025 年</dt><dd>&gt;99*</dd></div><div><dt>2030 年</dt><dd>&gt;99</dd></div></dl>
+<p>% · 约束性</p></li></ul>
+<p class="metric-key">* 为预计数。</p>
+<h4 class="metric-source">市市场监管局专项规划 · PDF 第 3 页</h4>
+<ul class="metrics"><li class="metric">
+<p class="metric-name">食品安全抽检合格率</p>
 <dl><div><dt>2025 年</dt><dd>&gt;98.5*</dd></div><div><dt>2030 年</dt><dd>&gt;98.7*</dd></div></dl>
-<p>% · 约束性</p></li>
-<li class="metric"><h4>食品安全抽检监测量</h4>
+<p>% · 约束性</p></li><li class="metric">
+<p class="metric-name">食品安全抽检监测量</p>
 <dl><div><dt>2025 年</dt><dd>6.1</dd></div><div><dt>2030 年</dt><dd>7</dd></div></dl>
-<p>批次/千人 · 预期性</p></li>
-<li class="metric"><h4>药品抽检合格率</h4>
+<p>批次/千人 · 预期性</p></li><li class="metric">
+<p class="metric-name">药品抽检合格率</p>
 <dl><div><dt>2025 年</dt><dd>&gt;99*</dd></div><div><dt>2030 年</dt><dd>&gt;99*</dd></div></dl>
-<p>% · 约束性</p></li>
-<li class="metric"><h4>开展追溯的重点食品生产经营主体占比</h4>
+<p>% · 约束性</p></li><li class="metric">
+<p class="metric-name">开展追溯的重点食品生产经营主体占比</p>
 <dl><div><dt>2025 年</dt><dd>—</dd></div><div><dt>2030 年</dt><dd>&gt;80</dd></div></dl>
-<p>% · 预期性</p></li>
-<li class="metric"><h4>住宅老旧电梯安全评估数量</h4>
+<p>% · 预期性</p></li></ul>
+<p class="metric-key">* 为每年数值。— 表示原表未列数值。</p>
+</section>
+<section class="ledger-section">
+<h3>市市场监管局专项规划其他指标</h3>
+<ul class="metrics"><li class="metric">
+<p class="metric-name">广告业务收入</p>
+<dl><div><dt>2025 年</dt><dd>—</dd></div><div><dt>2030 年</dt><dd>&gt;5000</dd></div></dl>
+<p>亿元 · 预期性</p></li><li class="metric">
+<p class="metric-name">质检技术服务业营业额</p>
+<dl><div><dt>2025 年</dt><dd>326</dd></div><div><dt>2030 年</dt><dd>≥400</dd></div></dl>
+<p>亿元 · 预期性</p></li><li class="metric">
+<p class="metric-name">新发布地方计量技术规范</p>
+<dl><div><dt>2025 年</dt><dd>【170】</dd></div><div><dt>2030 年</dt><dd>【200】</dd></div></dl>
+<p>个 · 预期性</p></li><li class="metric">
+<p class="metric-name">牵头或参与制定国家标准</p>
+<dl><div><dt>2025 年</dt><dd>【7682】</dd></div><div><dt>2030 年</dt><dd>【7800】</dd></div></dl>
+<p>项 · 预期性</p></li><li class="metric">
+<p class="metric-name">诉求即办直通车单位</p>
+<dl><div><dt>2025 年</dt><dd>72</dd></div><div><dt>2030 年</dt><dd>100</dd></div></dl>
+<p>个 · 预期性</p></li><li class="metric">
+<p class="metric-name">住宅老旧电梯安全评估数量</p>
 <dl><div><dt>2025 年</dt><dd>【3.98】</dd></div><div><dt>2030 年</dt><dd>【4.0】</dd></div></dl>
-<p>万台 · 约束性</p></li>
-<li class="metric"><h4>建设国家质检中心</h4>
+<p>万台 · 约束性</p></li><li class="metric">
+<p class="metric-name">建设国家质检中心</p>
 <dl><div><dt>2025 年</dt><dd>125</dd></div><div><dt>2030 年</dt><dd>130</dd></div></dl>
-<p>个 · 预期性</p></li>
-<li class="metric"><h4>建成总局重点实验室和技术创新中心</h4>
+<p>个 · 预期性</p></li><li class="metric">
+<p class="metric-name">建成总局重点实验室和技术创新中心</p>
 <dl><div><dt>2025 年</dt><dd>【3】</dd></div><div><dt>2030 年</dt><dd>【11】</dd></div></dl>
 <p>个 · 约束性</p></li></ul>
-<p class="metric-key">【】为五年累计，* 为每年数值，其余为期末值。— 表示原表未列数值。</p>
+<p class="metric-key">【】为五年累计，其余为期末值。— 表示原表未列数值。</p>
 </section>
 </div>
 </details>
