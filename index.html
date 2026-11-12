@@ -31,12 +31,11 @@ summary:focus-visible,a:focus-visible{outline:3px solid #98434d;outline-offset:3
 .read{padding:0 clamp(17px,5vw,45px) 27px}
 .framework{margin-top:21px}
 .framework-head{padding:14px 17px 13px;display:flex;align-items:center;justify-content:space-between;gap:10px;color:#ffefdb;background:#5a2530;min-height:78px;border:1px solid #5a2530;border-radius:3px}
-.three>.framework-head{background:#394b4e;border-color:#394b4e}
+.ledger>.framework-head{background:#394b4e;border-color:#394b4e}
 .framework-title{display:grid;gap:1px}
 .framework-title strong{font:700 clamp(23px,4vw,30px)/1.15 var(--display);letter-spacing:.035em}
 .framework-title>span{font-size:12px;color:#efd7c9}
 .framework-content{padding:14px 0 0}
-.group-heading{font:700 21px/1.3 var(--display);padding:3px 0 9px;border-bottom:1px solid var(--line);margin:10px 0 9px;color:#3a4d50}
 .task{--tint:#f3dfd7;--tone:#7d3840;--ax:0%;--ay:0%;border:1px solid var(--line);border-radius:3px;background:#fffaf3;margin-bottom:10px}
 .theme-1{--tint:#eee0e5;--tone:#634153;--ax:50%;--ay:0%}
 .theme-2{--tint:#e3ebe2;--tone:#385c51;--ax:100%;--ay:0%}
@@ -112,6 +111,39 @@ footer{border-top:1px solid var(--line);padding:15px clamp(17px,5vw,45px) max(23
   .task[open]::details-content,.evidence[open]::details-content{block-size:auto}
  }
 }
+
+.overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:16px 0 0}
+.overview-grid div{padding:9px 11px;border-left:2px solid #9c6265;background:#f4e9df}
+.overview-grid dt{color:var(--wine);font-weight:650;font-size:13px}
+.overview-grid dd{margin:2px 0 0;color:#50433d;font-size:13px;line-height:1.52}
+.ledger{--tone:#395457;--tint:#e6edeb}
+.ledger-content{padding:13px;background:#f4eee6;border:1px solid var(--line);border-top:0}
+.ledger-section{background:#fffdf8;border:1px solid var(--line);padding:13px}
+.ledger-section h3{font:700 20px/1.3 var(--display);color:var(--tone);margin-bottom:10px}
+.district-metrics ul,.metrics{list-style:none;padding:0;margin:0}
+.district-metrics ul{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:7px}
+.district-metrics li{padding:8px 10px;background:var(--tint);display:grid;gap:3px;font-size:13px}
+.district-metrics strong{font:700 25px/1.2 var(--display);color:var(--tone)}
+.ledger-link{font-size:12px;color:#385659;text-underline-offset:3px}
+.ledger-fold{margin-top:10px}
+.ledger-fold>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;background:#e7eeeb;border:1px solid #c0cfca;color:#314b4e;font-weight:650}
+.ledger-fold .toggle{width:24px;height:24px;font-size:17px}
+.ledger-note{font-size:12px;color:var(--muted);margin:0 0 10px}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.metric{background:#f7f3eb;border:1px solid var(--line);padding:9px 10px;min-width:0}
+.metric h4{font-size:14px;line-height:1.5;margin:0 0 6px}
+.metric dl{display:grid;grid-template-columns:1fr 1fr;margin:0 0 4px}
+.metric dt,.metric p{font-size:11px;color:var(--muted)}
+.metric dd{font-size:16px;font-weight:680;margin:0;color:var(--tone)}
+.project .evidence-content p{font-size:14px;margin-bottom:4px}
+@media(max-width:620px){
+ .overview-grid{gap:5px;margin-top:11px}
+ .overview-grid div{padding:6px 8px}
+ .overview-grid dd{font-size:12px}
+ .metrics{grid-template-columns:1fr}
+ .ledger-content,.ledger-section{padding:9px}
+}
+
 @media print{
  body{background:white}
  .story{box-shadow:none}
@@ -127,13 +159,19 @@ footer{border-top:1px solid var(--line);padding:15px clamp(17px,5vw,45px) max(23
 <h1 class="cover-title"><span>朝阳区市场监管</span>“十五五”<br>规划备参</h1>
 <div class="cover-bottom"><p>强党建、稳秩序、促发展、保安全</p><small>城市意象 · 生成插画</small></div>
 </header>
-<section class="intro" aria-labelledby="intro-title">
-<h2 id="intro-title">从工作要点读到规划原文</h2>
-<p>点开任务，接着往下读朝阳区工作要点。再点对应规划，即可在原处展开引文、章节和页码。</p>
+<section class="intro overview" aria-labelledby="intro-title">
+<h2 id="intro-title">规划总览</h2>
+<p>国家纲要明确战略方向，北京市纲要部署首都任务，市局专项规划细化行业要求，朝阳区纲要明确属地任务。</p>
+<dl class="overview-grid">
+<div><dt>国家纲要</dt><dd>全国统一大市场、消费权益和食品药品安全</dd></div>
+<div><dt>北京市纲要</dt><dd>首都营商环境、市场秩序和监管改革</dd></div>
+<div><dt>市局专项规划</dt><dd>到 2030 年，与首都功能定位相匹配的现代化市场监管体系更加健全</dd></div>
+<div><dt>朝阳区纲要</dt><dd>提升“五区”功能、建设“五宜”朝阳，落实属地任务和约束性指标</dd></div>
+</dl>
 </section>
 <div class="read">
-<details class="framework six" data-framework="six" open>
-<summary class="framework-head"><span class="framework-title"><strong>六项任务</strong><span>从经营主体活力到现代监管体系</span></span><span class="toggle" aria-hidden="true"></span></summary>
+<section class="framework six" data-framework="six" aria-labelledby="task-list-title">
+<h2 id="task-list-title" class="framework-head"><span class="framework-title"><strong>六项任务</strong><span>点开任务，向下查看朝阳区工作要点和四份规划原文</span></span></h2>
 <div class="framework-content"><details class="task theme-0" data-task="six-1">
 <summary class="task-head">
  <div class="head-art" aria-hidden="true"><span class="tile"></span></div>
@@ -326,203 +364,77 @@ footer{border-top:1px solid var(--line);padding:15px clamp(17px,5vw,45px) max(23
 </details></div></section>
 </div>
 </details></div>
+</section>
+<details class="framework ledger" id="ledger">
+<summary class="framework-head"><span class="framework-title"><strong>指标与重点工程清单</strong><span>市局指标与重点工程 · 朝阳区约束性指标</span></span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="ledger-content">
+<section class="ledger-section district-metrics">
+<h3>朝阳区 2030 年约束性指标</h3>
+<ul><li><span>食品安全抽检合格率</span><strong>&gt;98.7%</strong></li><li><span>药品抽检合格率</span><strong>&gt;99%</strong></li></ul>
+<a class="ledger-link" href="https://beijingtong.smebj.cn/cdn/big/2026/0928/18/0824A07640CFBF009F3BB9E74D3E19C5.pdf#page=23" target="_blank" rel="noopener noreferrer">朝阳区纲要 · PDF 第 23 页 <span aria-hidden="true">↗</span></a>
+</section>
+<details class="ledger-fold" id="city-metrics">
+<summary><span>12 项市局主要指标</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="ledger-section"><p class="ledger-note">北京市级口径。【】为五年累计，* 为每年数值，其他为截至当年底的期末值。“—”为原表未列数值。</p><ul class="metrics">
+<li class="metric"><h4>广告业务收入</h4>
+ <dl><div><dt>2025 年</dt><dd>—</dd></div><div><dt>2030 年</dt><dd>&gt;5000</dd></div></dl>
+ <p>亿元 · 预期性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=2" target="_blank" rel="noopener noreferrer">原文第 2 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>质检技术服务业营业额</h4>
+ <dl><div><dt>2025 年</dt><dd>326</dd></div><div><dt>2030 年</dt><dd>≥400</dd></div></dl>
+ <p>亿元 · 预期性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=2" target="_blank" rel="noopener noreferrer">原文第 2 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>新发布地方计量技术规范</h4>
+ <dl><div><dt>2025 年</dt><dd>【170】</dd></div><div><dt>2030 年</dt><dd>【200】</dd></div></dl>
+ <p>个 · 预期性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=2" target="_blank" rel="noopener noreferrer">原文第 2 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>牵头或参与制定国家标准</h4>
+ <dl><div><dt>2025 年</dt><dd>【7682】</dd></div><div><dt>2030 年</dt><dd>【7800】</dd></div></dl>
+ <p>项 · 预期性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=2" target="_blank" rel="noopener noreferrer">原文第 2 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>诉求即办直通车单位</h4>
+ <dl><div><dt>2025 年</dt><dd>72</dd></div><div><dt>2030 年</dt><dd>100</dd></div></dl>
+ <p>个 · 预期性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=2" target="_blank" rel="noopener noreferrer">原文第 2 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>食品安全抽检合格率</h4>
+ <dl><div><dt>2025 年</dt><dd>&gt;98.5*</dd></div><div><dt>2030 年</dt><dd>&gt;98.7*</dd></div></dl>
+ <p>% · 约束性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=3" target="_blank" rel="noopener noreferrer">原文第 3 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>食品安全抽检监测量</h4>
+ <dl><div><dt>2025 年</dt><dd>6.1</dd></div><div><dt>2030 年</dt><dd>7</dd></div></dl>
+ <p>批次/千人 · 预期性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=3" target="_blank" rel="noopener noreferrer">原文第 3 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>药品抽检合格率</h4>
+ <dl><div><dt>2025 年</dt><dd>&gt;99*</dd></div><div><dt>2030 年</dt><dd>&gt;99*</dd></div></dl>
+ <p>% · 约束性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=3" target="_blank" rel="noopener noreferrer">原文第 3 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>开展追溯的重点食品生产经营主体占比</h4>
+ <dl><div><dt>2025 年</dt><dd>—</dd></div><div><dt>2030 年</dt><dd>&gt;80</dd></div></dl>
+ <p>% · 预期性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=3" target="_blank" rel="noopener noreferrer">原文第 3 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>住宅老旧电梯安全评估数量</h4>
+ <dl><div><dt>2025 年</dt><dd>【3.98】</dd></div><div><dt>2030 年</dt><dd>【4.0】</dd></div></dl>
+ <p>万台 · 约束性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=3" target="_blank" rel="noopener noreferrer">原文第 3 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>建设国家质检中心</h4>
+ <dl><div><dt>2025 年</dt><dd>125</dd></div><div><dt>2030 年</dt><dd>130</dd></div></dl>
+ <p>个 · 预期性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=3" target="_blank" rel="noopener noreferrer">原文第 3 页 <span aria-hidden="true">↗</span></a></p></li>
+<li class="metric"><h4>建成总局重点实验室和技术创新中心</h4>
+ <dl><div><dt>2025 年</dt><dd>【3】</dd></div><div><dt>2030 年</dt><dd>【11】</dd></div></dl>
+ <p>个 · 约束性 · <a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=3" target="_blank" rel="noopener noreferrer">原文第 3 页 <span aria-hidden="true">↗</span></a></p></li></ul></div>
 </details>
-<details class="framework three" data-framework="three">
-<summary class="framework-head"><span class="framework-title"><strong>三守三创</strong><span>按底线职责和创新工作展开 · 备参归纳</span></span><span class="toggle" aria-hidden="true"></span></summary>
-<div class="framework-content"><h3 class="group-heading">三守</h3><details class="task theme-0" data-task="three-1">
-<summary class="task-head">
- <div class="head-art" aria-hidden="true"><span class="tile"></span></div>
- <span class="task-label"><strong>守护营商环境</strong><span>优化准入准营退出</span></span>
- <span class="task-toggle toggle" aria-hidden="true"></span>
-</summary>
-<div class="reveal">
- <div class="scene"><div class="scene-art" aria-hidden="true"><span class="tile"></span></div>
-  <section class="brief"><h3>朝阳区工作要点</h3><p>围绕首都高水平对外开放窗口区建设，保障各类经营主体平等准入和便利退出，推动设立、变更、退出各环节顺畅衔接。对照市局登记注册改革和经营主体提质增效部署，关注新业态经营主体登记、合规服务需求。</p></section>
- </div>
- <section class="proof"><h3>四份规划原文</h3><div class="sources"><details class="evidence" data-source="national">
-<summary><span>国家纲要</span><small>第十七章第一节 · PDF 第 49 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《中华人民共和国国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>探索建立覆盖所有经营主体的简易退出机制</blockquote><div class="actions"><a class="pdf-link" href="https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf#page=49" target="_blank" rel="noopener noreferrer">打开国家发展改革委公开 PDF <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="beijing">
-<summary><span>北京市纲要</span><small>第九篇第三章第一节 · PDF 第 100 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>推进经营范围规范化和登记住所标准化改革，优化企业注销流程</blockquote><div class="actions"><a class="pdf-link primary" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/W020260521433654900452.pdf#page=100" target="_blank" rel="noopener noreferrer">打开北京市纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/t20260407_4576089.html" target="_blank" rel="noopener noreferrer">查看北京市公开发布页 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="bureau">
-<summary><span>市局专项规划</span><small>第二部分第一项 · PDF 第 3 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市“十五五”时期市场监管现代化规划》</p>
-<blockquote>推广经营场所标准化登记服务模式</blockquote><div class="actions"><a class="pdf-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=3" target="_blank" rel="noopener noreferrer">打开市局正式印发附件 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="district">
-<summary><span>朝阳区纲要</span><small>第三篇第三章第一节 · PDF 第 36 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市朝阳区国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>持续推动经营主体设立、变更、退出更加便利高效</blockquote><div class="actions"><a class="pdf-link primary" href="https://beijingtong.smebj.cn/cdn/big/2026/0928/18/0824A07640CFBF009F3BB9E74D3E19C5.pdf#page=36" target="_blank" rel="noopener noreferrer">打开朝阳区纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://chyrd.bjchy.gov.cn/rdhy/rdh/Shiqiqicirdhhb/8a24f0b49bc52cff019bc57d9fe70009.html" target="_blank" rel="noopener noreferrer">查看朝阳区人大批准决议 <span aria-hidden="true">↗</span></a></div></div>
-</details></div></section>
-</div>
-</details>
-<details class="task theme-1" data-task="three-2">
-<summary class="task-head">
- <div class="head-art" aria-hidden="true"><span class="tile"></span></div>
- <span class="task-label"><strong>守护公平秩序</strong><span>维护统一市场规则</span></span>
- <span class="task-toggle toggle" aria-hidden="true"></span>
-</summary>
-<div class="reveal">
- <div class="scene"><div class="scene-art" aria-hidden="true"><span class="tile"></span></div>
-  <section class="brief"><h3>朝阳区工作要点</h3><p>把公平竞争审查、涉企收费和平台经营秩序作为政策措施与日常监管的共同着力点。落实朝阳区破除市场准入、政府采购、招投标隐性壁垒和反不正当竞争要求，衔接市局会审、整改和跨区域执法协作。</p></section>
- </div>
- <section class="proof"><h3>四份规划原文</h3><div class="sources"><details class="evidence" data-source="national">
-<summary><span>国家纲要</span><small>第十七章第二节 · PDF 第 49 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《中华人民共和国国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>强化公平竞争审查刚性约束</blockquote><div class="actions"><a class="pdf-link" href="https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf#page=49" target="_blank" rel="noopener noreferrer">打开国家发展改革委公开 PDF <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="beijing">
-<summary><span>北京市纲要</span><small>第八篇第四章第二节 · PDF 第 90 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>健全审查抽查、核查整改机制</blockquote><div class="actions"><a class="pdf-link primary" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/W020260521433654900452.pdf#page=90" target="_blank" rel="noopener noreferrer">打开北京市纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/t20260407_4576089.html" target="_blank" rel="noopener noreferrer">查看北京市公开发布页 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="bureau">
-<summary><span>市局专项规划</span><small>第四部分第一项 · PDF 第 8 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市“十五五”时期市场监管现代化规划》</p>
-<blockquote>健全重大政策措施会审机制</blockquote><div class="actions"><a class="pdf-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=8" target="_blank" rel="noopener noreferrer">打开市局正式印发附件 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="district">
-<summary><span>朝阳区纲要</span><small>第三篇第三章第一节 · PDF 第 36 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市朝阳区国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>落实公平竞争审查制度，破除市场准入、政府采购、招投标等领域隐性门槛和壁垒</blockquote><div class="actions"><a class="pdf-link primary" href="https://beijingtong.smebj.cn/cdn/big/2026/0928/18/0824A07640CFBF009F3BB9E74D3E19C5.pdf#page=36" target="_blank" rel="noopener noreferrer">打开朝阳区纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://chyrd.bjchy.gov.cn/rdhy/rdh/Shiqiqicirdhhb/8a24f0b49bc52cff019bc57d9fe70009.html" target="_blank" rel="noopener noreferrer">查看朝阳区人大批准决议 <span aria-hidden="true">↗</span></a></div></div>
-</details></div></section>
-</div>
-</details>
-<details class="task theme-4" data-task="three-3">
-<summary class="task-head">
- <div class="head-art" aria-hidden="true"><span class="tile"></span></div>
- <span class="task-label"><strong>守牢安全底线</strong><span>强化全过程风险防控</span></span>
- <span class="task-toggle toggle" aria-hidden="true"></span>
-</summary>
-<div class="reveal">
- <div class="scene"><div class="scene-art" aria-hidden="true"><span class="tile"></span></div>
-  <section class="brief"><h3>朝阳区工作要点</h3><p>以食品药品、重点工业产品和特种设备安全为重点，对照市局全链条监管、重大活动保障要求，推进朝阳区食品追溯、药品全生命周期监管和重点隐患治理。区纲要明确，2030年食品安全抽检合格率＞98.7%、药品抽检合格率＞99%，均为约束性指标。</p></section>
- </div>
- <section class="proof"><h3>四份规划原文</h3><div class="sources"><details class="evidence" data-source="national">
-<summary><span>国家纲要</span><small>第五十三章第一节 · PDF 第 125 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《中华人民共和国国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>健全食品药品全链条全过程监管机制</blockquote><div class="actions"><a class="pdf-link" href="https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf#page=125" target="_blank" rel="noopener noreferrer">打开国家发展改革委公开 PDF <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="beijing">
-<summary><span>北京市纲要</span><small>第十篇第三章第一节 · PDF 第 113 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>构建食品全链条监管体系</blockquote><div class="actions"><a class="pdf-link primary" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/W020260521433654900452.pdf#page=113" target="_blank" rel="noopener noreferrer">打开北京市纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/t20260407_4576089.html" target="_blank" rel="noopener noreferrer">查看北京市公开发布页 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="bureau">
-<summary><span>市局专项规划</span><small>第六部分第一项 · PDF 第 13 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市“十五五”时期市场监管现代化规划》</p>
-<blockquote>构建食品安全全链条监管体系</blockquote><div class="actions"><a class="pdf-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=13" target="_blank" rel="noopener noreferrer">打开市局正式印发附件 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="district">
-<summary><span>朝阳区纲要</span><small>第十篇第二章第三节 · PDF 第 108 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市朝阳区国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>构建食品全过程追溯体系，稳妥推进重点场所食品集中供应，规范网络食品销售等新业态</blockquote><div class="actions"><a class="pdf-link primary" href="https://beijingtong.smebj.cn/cdn/big/2026/0928/18/0824A07640CFBF009F3BB9E74D3E19C5.pdf#page=108" target="_blank" rel="noopener noreferrer">打开朝阳区纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://chyrd.bjchy.gov.cn/rdhy/rdh/Shiqiqicirdhhb/8a24f0b49bc52cff019bc57d9fe70009.html" target="_blank" rel="noopener noreferrer">查看朝阳区人大批准决议 <span aria-hidden="true">↗</span></a></div></div>
-</details></div></section>
-</div>
-</details><h3 class="group-heading">三创</h3><details class="task theme-5" data-task="three-4">
-<summary class="task-head">
- <div class="head-art" aria-hidden="true"><span class="tile"></span></div>
- <span class="task-label"><strong>创新监管方式</strong><span>提升协同治理效能</span></span>
- <span class="task-toggle toggle" aria-hidden="true"></span>
-</summary>
-<div class="reveal">
- <div class="scene"><div class="scene-art" aria-hidden="true"><span class="tile"></span></div>
-  <section class="brief"><h3>朝阳区工作要点</h3><p>统筹服务型执法、一体化综合监管、智慧监管和信用监管，推进“综合查一次”、非现场监管和信用分级分类，健全容错纠错与行刑衔接机制。对照市局部署，把基层市场监管所规范化和风险线索协同作为履职支撑。</p></section>
- </div>
- <section class="proof"><h3>四份规划原文</h3><div class="sources"><details class="evidence" data-source="national">
-<summary><span>国家纲要</span><small>第十七章第二节 · PDF 第 50 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《中华人民共和国国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>健全综合执法体制机制，优化监管事项层级设置，提高基层执法效能</blockquote><div class="actions"><a class="pdf-link" href="https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf#page=50" target="_blank" rel="noopener noreferrer">打开国家发展改革委公开 PDF <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="beijing">
-<summary><span>北京市纲要</span><small>第九篇第三章第二节 · PDF 第 101 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>深入推进一体化综合监管改革</blockquote><div class="actions"><a class="pdf-link primary" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/W020260521433654900452.pdf#page=101" target="_blank" rel="noopener noreferrer">打开北京市纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/t20260407_4576089.html" target="_blank" rel="noopener noreferrer">查看北京市公开发布页 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="bureau">
-<summary><span>市局专项规划</span><small>第七部分第二项 · PDF 第 16 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市“十五五”时期市场监管现代化规划》</p>
-<blockquote>深化“风险+信用”分级分类结果差异化应用</blockquote><div class="actions"><a class="pdf-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=16" target="_blank" rel="noopener noreferrer">打开市局正式印发附件 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="district">
-<summary><span>朝阳区纲要</span><small>第十一篇第三章第一节 · PDF 第 116 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市朝阳区国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>持续扩大“无事不扰”企业范围，试行“综合查一次”，强化非现场监管</blockquote><div class="actions"><a class="pdf-link primary" href="https://beijingtong.smebj.cn/cdn/big/2026/0928/18/0824A07640CFBF009F3BB9E74D3E19C5.pdf#page=116" target="_blank" rel="noopener noreferrer">打开朝阳区纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://chyrd.bjchy.gov.cn/rdhy/rdh/Shiqiqicirdhhb/8a24f0b49bc52cff019bc57d9fe70009.html" target="_blank" rel="noopener noreferrer">查看朝阳区人大批准决议 <span aria-hidden="true">↗</span></a></div></div>
-</details></div></section>
-</div>
-</details>
-<details class="task theme-3" data-task="three-5">
-<summary class="task-head">
- <div class="head-art" aria-hidden="true"><span class="tile"></span></div>
- <span class="task-label"><strong>创优服务环境</strong><span>提升办事和维权便利度</span></span>
- <span class="task-toggle toggle" aria-hidden="true"></span>
-</summary>
-<div class="reveal">
- <div class="scene"><div class="scene-art" aria-hidden="true"><span class="tile"></span></div>
-  <section class="brief"><h3>朝阳区工作要点</h3><p>企业端深化“高效办成一件事”，探索朝阳特色场景和智能咨询、帮办、预审。消费端围绕重点商圈完善维权服务，衔接接诉即办、在线纠纷解决和预付式消费监管，让诉求办理和风险防范相互支撑。</p></section>
- </div>
- <section class="proof"><h3>四份规划原文</h3><div class="sources"><details class="evidence" data-source="national">
-<summary><span>国家纲要</span><small>第十五章第四节 · PDF 第 47 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《中华人民共和国国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>畅通消费者投诉和维权渠道</blockquote><div class="actions"><a class="pdf-link" href="https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf#page=47" target="_blank" rel="noopener noreferrer">打开国家发展改革委公开 PDF <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="beijing">
-<summary><span>北京市纲要</span><small>第八篇第一章第三节 · PDF 第 85 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>创新消费纠纷多元化解模式</blockquote><div class="actions"><a class="pdf-link primary" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/W020260521433654900452.pdf#page=85" target="_blank" rel="noopener noreferrer">打开北京市纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/t20260407_4576089.html" target="_blank" rel="noopener noreferrer">查看北京市公开发布页 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="bureau">
-<summary><span>市局专项规划</span><small>第五部分第三项 · PDF 第 11 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市“十五五”时期市场监管现代化规划》</p>
-<blockquote>依托全国12315平台在线消费纠纷解决和市场监管领域“诉求即办直通车”机制</blockquote><div class="actions"><a class="pdf-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=11" target="_blank" rel="noopener noreferrer">打开市局正式印发附件 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="district">
-<summary><span>朝阳区纲要</span><small>第十一篇第二章第一节 · PDF 第 113 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市朝阳区国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>设立“消费者维权站”，优化预付费消费环境</blockquote><div class="actions"><a class="pdf-link primary" href="https://beijingtong.smebj.cn/cdn/big/2026/0928/18/0824A07640CFBF009F3BB9E74D3E19C5.pdf#page=113" target="_blank" rel="noopener noreferrer">打开朝阳区纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://chyrd.bjchy.gov.cn/rdhy/rdh/Shiqiqicirdhhb/8a24f0b49bc52cff019bc57d9fe70009.html" target="_blank" rel="noopener noreferrer">查看朝阳区人大批准决议 <span aria-hidden="true">↗</span></a></div></div>
-</details></div></section>
-</div>
-</details>
-<details class="task theme-2" data-task="three-6">
-<summary class="task-head">
- <div class="head-art" aria-hidden="true"><span class="tile"></span></div>
- <span class="task-label"><strong>创造发展条件</strong><span>做实质量和产业支撑</span></span>
- <span class="task-toggle toggle" aria-hidden="true"></span>
-</summary>
-<div class="reveal">
- <div class="scene"><div class="scene-art" aria-hidden="true"><span class="tile"></span></div>
-  <section class="brief"><h3>朝阳区工作要点</h3><p>围绕重点产业和园区需求，推进质量提升、标准研制和计量、认证、检验检测服务衔接。结合朝阳区知识产权“五位一体”工作体系、海外纠纷应对指导和数字广告产业园建设，研究市场监管专业服务如何支持产业提质。</p></section>
- </div>
- <section class="proof"><h3>四份规划原文</h3><div class="sources"><details class="evidence" data-source="national">
-<summary><span>国家纲要</span><small>第十七章第二节 · PDF 第 50 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《中华人民共和国国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>完善协调统一的国家标准体系</blockquote><div class="actions"><a class="pdf-link" href="https://www.ndrc.gov.cn/fggz/fzzlgh/gjfzgh/202603/U020260317369114704096.pdf#page=50" target="_blank" rel="noopener noreferrer">打开国家发展改革委公开 PDF <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="beijing">
-<summary><span>北京市纲要</span><small>第七篇第二章第三节 · PDF 第 77 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>推动研究开发服务、技术转移转化服务、检验检测认证服务与新兴产业融合发展</blockquote><div class="actions"><a class="pdf-link primary" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/W020260521433654900452.pdf#page=77" target="_blank" rel="noopener noreferrer">打开北京市纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202604/t20260407_4576089.html" target="_blank" rel="noopener noreferrer">查看北京市公开发布页 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="bureau">
-<summary><span>市局专项规划</span><small>第三部分第二项 · PDF 第 6 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市“十五五”时期市场监管现代化规划》</p>
-<blockquote>实施“一产业一标准体系”赋能行动</blockquote><div class="actions"><a class="pdf-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=6" target="_blank" rel="noopener noreferrer">打开市局正式印发附件 <span aria-hidden="true">↗</span></a></div></div>
-</details>
-<details class="evidence" data-source="district">
-<summary><span>朝阳区纲要</span><small>第三篇第三章第一节 · PDF 第 36 页</small><span class="toggle" aria-hidden="true"></span></summary>
-<div class="evidence-content"><p class="document-title">《北京市朝阳区国民经济和社会发展第十五个五年规划纲要》</p>
-<blockquote>深入实施质量提升行动，健全重点领域标准体系</blockquote><div class="actions"><a class="pdf-link primary" href="https://beijingtong.smebj.cn/cdn/big/2026/0928/18/0824A07640CFBF009F3BB9E74D3E19C5.pdf#page=36" target="_blank" rel="noopener noreferrer">打开朝阳区纲要 PDF <span aria-hidden="true">↗</span></a><a class="pdf-link" href="https://chyrd.bjchy.gov.cn/rdhy/rdh/Shiqiqicirdhhb/8a24f0b49bc52cff019bc57d9fe70009.html" target="_blank" rel="noopener noreferrer">查看朝阳区人大批准决议 <span aria-hidden="true">↗</span></a></div></div>
-</details></div></section>
-</div>
-</details></div>
+<details class="ledger-fold" id="projects">
+<summary><span>7 个市局重点工程</span><span class="toggle" aria-hidden="true"></span></summary>
+<div class="ledger-section sources">
+<details class="evidence project"><summary><span>北京市广告产业发展质量提升工程</span><small>专栏1 · PDF 第 4 页</small><span class="toggle" aria-hidden="true"></span></summary>
+<div class="evidence-content"><p>推动广告产业技术创新、场景应用和合规管理，推进北京国家数字广告产业园试点。</p><a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=4" target="_blank" rel="noopener noreferrer">打开市局专项规划 <span aria-hidden="true">↗</span></a></div></details>
+<details class="evidence project"><summary><span>计量服务能力提升工程</span><small>专栏2 · PDF 第 7 页</small><span class="toggle" aria-hidden="true"></span></summary>
+<div class="evidence-content"><p>推进计量技术数字化转型、计量科研创新和产业计量服务。</p><a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=7" target="_blank" rel="noopener noreferrer">打开市局专项规划 <span aria-hidden="true">↗</span></a></div></details>
+<details class="evidence project"><summary><span>建设自动驾驶汽车质量检验检测平台</span><small>专栏3 · PDF 第 8 页</small><span class="toggle" aria-hidden="true"></span></summary>
+<div class="evidence-content"><p>建设自动驾驶汽车质量检验检测能力，支持多场景测试应用。</p><a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=8" target="_blank" rel="noopener noreferrer">打开市局专项规划 <span aria-hidden="true">↗</span></a></div></details>
+<details class="evidence project"><summary><span>建设全国直播电商监测平台（北京）</span><small>专栏4 · PDF 第 9 页</small><span class="toggle" aria-hidden="true"></span></summary>
+<div class="evidence-content"><p>建设全国直播电商监测平台（北京），加强监测预警和产品追溯。</p><a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=9" target="_blank" rel="noopener noreferrer">打开市局专项规划 <span aria-hidden="true">↗</span></a></div></details>
+<details class="evidence project"><summary><span>消费环境提升工程</span><small>专栏5 · PDF 第 12 页</small><span class="toggle" aria-hidden="true"></span></summary>
+<div class="evidence-content"><p>推进放心消费培育、消费宣传教育和“诉求即办直通车”扩展。</p><a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=12" target="_blank" rel="noopener noreferrer">打开市局专项规划 <span aria-hidden="true">↗</span></a></div></details>
+<details class="evidence project"><summary><span>北京食品质量标准体系建设工程</span><small>专栏6 · PDF 第 13 页</small><span class="toggle" aria-hidden="true"></span></summary>
+<div class="evidence-content"><p>建设北京食品质量标准体系，推进重点食品品类“京品”特色标准制修订。</p><a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=13" target="_blank" rel="noopener noreferrer">打开市局专项规划 <span aria-hidden="true">↗</span></a></div></details>
+<details class="evidence project"><summary><span>智慧监管平台建设工程</span><small>专栏7 · PDF 第 14 页</small><span class="toggle" aria-hidden="true"></span></summary>
+<div class="evidence-content"><p>推进北京市食品安全全链条数字化平台建设，强化数字监测和风险预警。</p><a class="ledger-link" href="https://scjgj.beijing.gov.cn/zwxx/2024zcwj/202609/W020260930543986544449.pdf#page=14" target="_blank" rel="noopener noreferrer">打开市局专项规划 <span aria-hidden="true">↗</span></a></div></details></div>
 </details>
 </div>
-<footer>依据新版六项任务稿和“三守三创”稿。封面工作主线引自市局专项规划第一部分。页码从各 PDF 首页计数。主题画面为生成插画。</footer>
+</details>
+</div>
+<footer>依据新版六项任务稿及四份规划。封面工作主线引自市局专项规划第一部分。页码从各 PDF 首页计数。主题画面为生成插画。</footer>
 </main>
 </body>
 </html>
