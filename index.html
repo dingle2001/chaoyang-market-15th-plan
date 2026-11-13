@@ -135,35 +135,11 @@ footer a{color:var(--wine);text-underline-offset:4px}
 .executive{margin-bottom:29px;border:1px solid var(--line);border-radius:4px;scroll-margin-top:12px}
 .executive-header{padding:19px clamp(15px,4vw,29px);color:#fffbf3;background:#56232d;border-radius:3px 3px 0 0}
 .executive .executive-header h2{color:inherit}
-.executive-header p{margin-top:7px;font-size:18px;line-height:1.7;color:#f8e6d7}
-.executive-header .executive-lead{margin-top:11px;font-size:clamp(21px,3.5vw,25px);font-weight:700;color:#fff8ee}
-
-.executive-body{padding:8px clamp(12px,3vw,23px) 14px;background:#fffcf5}
-.executive-principles,.executive-evidence dl{margin:0}
-.executive-principles div,.executive-evidence dl div{display:grid;grid-template-columns:12em minmax(0,1fr);gap:3px 14px;padding:9px 0;border-bottom:1px solid var(--line)}
-.executive-principles dt,.executive-evidence dt{font-weight:700;color:var(--wine)}
-.executive-principles dd,.executive-evidence dd{margin:0;font-size:19px;line-height:1.7}
-.executive-evidence{margin-top:12px;border:1px solid var(--line);border-radius:3px}
-.executive-evidence summary{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;padding:8px 11px;color:var(--wine);font-size:17px;font-weight:650}
-.executive-evidence .toggle{width:23px;height:23px;font-size:17px}
-.executive-evidence dl{padding:0 11px}
-.executive-evidence dl div:last-child{border-bottom:0}
-.executive-evidence dd+dd{grid-column:2;margin-top:4px}
-.executive-evidence dl div[id]{scroll-margin-top:12px}
-.executive-bridge{margin-top:10px;color:var(--muted);font-size:18px}
-@media(max-width:620px){
- .executive{margin-bottom:22px}
- .executive-principles div,.executive-evidence dl div{grid-template-columns:1fr}
- .executive-evidence dd+dd{grid-column:1}
-}
-.common{margin-top:17px}
-.common h3{margin-bottom:6px;color:var(--wine);font:700 25px/1.35 var(--display)}
-.common-grid{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
-.common-grid>div{padding:9px 12px;background:#f3e9df;border-left:3px solid var(--wine)}
-.common-grid dt{font-weight:700;color:var(--wine)}
-.common-grid dd{margin:2px 0 0;font-size:18px;line-height:1.65}
-.common-links{display:flex;flex-wrap:wrap;gap:2px 12px;margin-top:5px}
-.common-links a{font-size:17px;color:var(--wine);text-underline-offset:3px}
+.executive-body{padding:4px clamp(12px,3vw,23px) 10px;background:#fffcf5}
+.overview-quote{margin:0;padding:12px 0;border-bottom:1px solid var(--line);scroll-margin-top:12px}
+.overview-quote:last-child{border-bottom:0}
+.overview-quote blockquote{font-size:20px;line-height:1.7}
+.overview-quote figcaption{margin-top:4px;color:var(--muted);font-size:17px;line-height:1.55}
 .coverage,.coverage-item{margin-top:12px;border:1px solid var(--line);border-radius:3px;scroll-margin-top:12px}
 .coverage>summary,.coverage-item>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:46px;padding:8px 11px;font-weight:700;color:var(--tone);background:var(--tint)}
 .coverage-inner{padding:0 10px 10px}
@@ -177,7 +153,6 @@ footer a{color:var(--wine);text-underline-offset:4px}
 .coverage-sources dd{margin:4px 0 0;font-size:19px;line-height:1.7;white-space:pre-line;overflow-wrap:anywhere}
 .coverage-sources .coverage-note{color:var(--muted);font-size:17px}
 .coverage-shortcut{display:inline-block;margin-top:8px;color:var(--tone);font-size:17px;text-underline-offset:3px}
-@media(max-width:620px){.common-grid{grid-template-columns:1fr}}
 .coverage-intro{margin-top:8px;font-size:17px;color:var(--muted)}
 </style>
 </head>
@@ -190,36 +165,17 @@ footer a{color:var(--wine);text-underline-offset:4px}
 </header>
 <div class="read">
 <section class="executive" id="overview" aria-labelledby="overview-title">
-  <header class="executive-header">
-    <h2 id="overview-title">总体遵循与工作主线</h2>
-    <p class="executive-lead">坚持党的全面领导，立足朝阳功能定位，统筹发展和安全，把上位规划要求贯穿全局谋划和实施。</p>
-    <p>围绕新质生产力融合发展示范区、国际消费中心城市主承载区和超大城市现代化治理典范区建设，以良好市场环境服务朝阳高质量发展。</p>
-  </header>
+  <header class="executive-header"><h2 id="overview-title">总体遵循与工作主线</h2></header>
   <div class="executive-body">
-    <dl class="executive-principles">
-      <div><dt>坚持党的全面领导</dt><dd>把党的领导贯穿规划编制和实施，加强对重大工作的集中统一领导，推动重点部署落实。</dd></div>
-      <div><dt>坚持科学民主依法决策</dt><dd>健全和落实民主集中制，深入调查研究、充分听取意见，把上位要求与朝阳实际结合起来。</dd></div>
-      <div><dt>统筹发展和安全</dt><dd>把服务发展、维护市场秩序、保障民生安全放在一起谋划，加强跨科室、跨部门、区街协同。</dd></div>
-    </dl>
-    <details class="executive-evidence" id="overview-evidence">
-      <summary>查看总体原则原文<span class="toggle" aria-hidden="true"></span></summary>
-      <dl>
-        <div id="capacity-t2-national"><dt>国家</dt><dd>健全和落实民主集中制，坚持科学决策、民主决策、依法决策。</dd></div>
-        <div><dt>北京市</dt><dd>完善落实机制，以钉钉子精神抓好党中央重大决策部署落实。</dd></div>
-        <div id="capacity-t1-bureau"><dt>市市场监管局</dt><dd>将党的领导贯穿于规划实施的全过程、各领域、各环节。</dd></div>
-        <div><dt>朝阳区</dt><dd>完善重大决策部署落实机制，加强对重大工作的集中统一领导。健全党委决策咨询机制，充分听取各方面意见，在调查研究基础上提出重大决策方案。</dd><dd>坚持统筹发展和安全。深入落实总体国家安全观，加强维护首都安全战略能力建设，全力防范化解各类风险隐患，增强经济和社会韧性，以高效能治理促进高质量发展和高水平安全良性互动，以新安全格局保障新发展格局。</dd></div>
-      </dl>
-    </details>
-    <section class="common" aria-labelledby="common-title">
-  <h3 id="common-title">各分管板块的共性要求</h3>
-  <dl class="common-grid">
-    <div><dt>党建引领，协同落实</dt><dd>把党的领导贯穿各分管领域。跨科室、跨部门事项加强信息共享、会商和协同处置。<span class="common-links"><a href="#capacity">固根基</a><a href="#development-t2-district">综合监管</a></span></dd></div>
-    <div><dt>服务发展，维护公平</dt><dd>以公平竞争、规范执法、便捷政务和质量技术服务支持经营主体发展，把监管要求落实到企业服务和执法各环节。<span class="common-links"><a href="#quality">强支撑</a><a href="#rights">严执法</a><a href="#development">激活力</a><a href="#order-t1-district">公平竞争</a></span></dd></div>
-    <div><dt>关口前移，守住底线</dt><dd>围绕食品、药品、重点工业产品和特种设备，强化风险识别、分级监管和问题处置。把重大活动保障、投诉诉求和日常监管衔接起来。<span class="common-links"><a href="#quality">重点产品与特种设备</a><a href="#rights-t2-district">药品</a><a href="#order">食品与重大活动</a></span></dd></div>
-    <div><dt>夯实基层，提升效能</dt><dd>加强监管所建设和专业人才培养，推动标准规范、数字工具和信用信息服务基层监管、政务服务和执法。<span class="common-links"><a href="#capacity">监管所与人才</a><a href="#quality">质量技术支撑</a><a href="#development-t3-district">信用监管</a></span></dd></div>
-  </dl>
-</section>
-<p class="executive-bridge">以上原则贯穿以下五个板块，具体任务与目标见下文。</p>
+<figure class="overview-quote"><blockquote>提升首都高水平对外开放窗口区、新质生产力融合发展示范区、国际消费中心城市主承载区、首都文化创新引领区、超大城市现代化治理典范区功能</blockquote><figcaption>朝阳区“十五五”规划纲要 · 指导思想</figcaption></figure>
+<figure class="overview-quote" id="capacity-t1-bureau"><blockquote>将党的领导贯穿于规划实施的全过程、各领域、各环节。完善部门协同、上下联动的组织体系，各区、各有关部门立足辖区实际和部门职责，各司其职，密切配合，共同推进各项目标任务落地实施。</blockquote><figcaption>北京市“十五五”时期市场监管现代化规划 · 加强实施保障</figcaption></figure>
+<figure class="overview-quote" id="capacity-t2-national"><blockquote>健全和落实民主集中制，坚持科学决策、民主决策、依法决策。</blockquote><figcaption>国家“十五五”规划纲要 · 强化党对规划实施全过程的领导</figcaption></figure>
+<figure class="overview-quote"><blockquote>完善落实机制，以钉钉子精神抓好党中央重大决策部署落实。</blockquote><figcaption>北京市“十五五”规划纲要 · 坚持和加强党的全面领导</figcaption></figure>
+<figure class="overview-quote"><blockquote>完善重大决策部署落实机制，加强对重大工作的集中统一领导。健全党委决策咨询机制，充分听取各方面意见，在调查研究基础上提出重大决策方案。</blockquote><figcaption>朝阳区“十五五”规划纲要 · 完善党领导经济社会发展的工作机制</figcaption></figure>
+<figure class="overview-quote"><blockquote>主动融入和服务全国统一大市场，着力营造一流营商环境，全面提升质量支撑水平，切实规范市场秩序，构建放心消费环境，坚决守住安全底线</blockquote><figcaption>北京市“十五五”时期市场监管现代化规划 · 总体要求</figcaption></figure>
+<figure class="overview-quote"><blockquote>坚持统筹发展和安全。深入落实总体国家安全观，加强维护首都安全战略能力建设，全力防范化解各类风险隐患，增强经济和社会韧性，以高效能治理促进高质量发展和高水平安全良性互动，以新安全格局保障新发展格局。</blockquote><figcaption>朝阳区“十五五”规划纲要 · 基本要求</figcaption></figure>
+<figure class="overview-quote"><blockquote>强化政策衔接、会商研判、信息共享、联合处置，靶向治理高风险问题。</blockquote><figcaption>北京市“十五五”时期市场监管现代化规划 · 推动协同监管</figcaption></figure>
+<figure class="overview-quote"><blockquote>深化基层市场监管所标准化规范化建设。</blockquote><figcaption>北京市“十五五”时期市场监管现代化规划 · 夯实支撑基础</figcaption></figure>
   </div>
 </section>
 <section aria-labelledby="planning">
