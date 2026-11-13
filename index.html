@@ -136,28 +136,24 @@ footer a{color:var(--wine);text-underline-offset:4px}
 .executive .executive-header h2{color:inherit}
 .executive-header p{margin-top:7px;font-size:14px;line-height:1.7;color:#f8e6d7}
 .executive-header .executive-lead{margin-top:11px;font-size:clamp(17px,3vw,21px);font-weight:700;color:#fff8ee}
-.executive-body{padding:15px clamp(12px,3vw,23px) 6px;background:#fffcf5}
-.executive h3{font:700 clamp(18px,3.6vw,22px)/1.3 var(--display);color:var(--wine)}
-.executive-targets-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.executive a{color:var(--wine);text-underline-offset:3px;font-size:14px}
-.executive-targets-head a{flex:none}
-.executive-targets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:9px 0 17px}
-.executive-targets div{background:#f1e8df;border-left:2px solid #a07372;padding:8px 10px}
-.executive-targets dt{font-size:14px;line-height:1.45;font-weight:600}
-.executive-targets dd{margin:3px 0 0;display:flex;align-items:baseline;gap:4px 9px;flex-wrap:wrap}
-.executive-targets strong{font:700 clamp(21px,4vw,28px)/1.18 var(--display);color:var(--wine)}
-.executive-targets span{font-size:13px;color:var(--muted)}
-.executive-agenda{margin:5px 0 0;padding:0;list-style:none}
-.executive-agenda li{display:grid;grid-template-columns:11.5em 1fr;gap:2px 14px;padding:10px 0;border-top:1px solid var(--line)}
-.executive-agenda h4{margin:0;font-size:15px;color:var(--wine)}
-.executive-agenda p{font-size:14px;line-height:1.6}
-.executive-agenda li div{grid-column:2;display:flex;gap:8px 14px;flex-wrap:wrap}
+
+.executive-body{padding:8px clamp(12px,3vw,23px) 14px;background:#fffcf5}
+.executive-principles,.executive-evidence dl{margin:0}
+.executive-principles div,.executive-evidence dl div{display:grid;grid-template-columns:11.5em 1fr;gap:3px 14px;padding:9px 0;border-bottom:1px solid var(--line)}
+.executive-principles dt,.executive-evidence dt{font-weight:700;color:var(--wine)}
+.executive-principles dd,.executive-evidence dd{margin:0;font-size:15px;line-height:1.65}
+.executive-evidence{margin-top:12px;border:1px solid var(--line);border-radius:3px}
+.executive-evidence summary{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 11px;color:var(--wine);font-size:14px;font-weight:650}
+.executive-evidence .toggle{width:23px;height:23px;font-size:17px}
+.executive-evidence dl{padding:0 11px}
+.executive-evidence dl div:last-child{border-bottom:0}
+.executive-evidence dd+dd{grid-column:2;margin-top:4px}
+.executive-evidence dl div[id]{scroll-margin-top:12px}
+.executive-bridge{margin-top:10px;color:var(--muted);font-size:14px}
 @media(max-width:620px){
  .executive{margin-bottom:22px}
- .executive-targets{grid-template-columns:repeat(2,minmax(0,1fr))}
- .executive-targets div:first-child{grid-column:1/-1}
- .executive-agenda li{grid-template-columns:1fr;gap:4px}
- .executive-agenda li div{grid-column:1}
+ .executive-principles div,.executive-evidence dl div{grid-template-columns:1fr}
+ .executive-evidence dd+dd{grid-column:1}
 }
 </style>
 </head>
@@ -171,38 +167,26 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <div class="read">
 <section class="executive" id="overview" aria-labelledby="overview-title">
   <header class="executive-header">
-    <h2 id="overview-title">全局谋划与务虚议题</h2>
-    <p class="executive-lead">以党建统领市场监管，以良好市场环境服务朝阳高质量发展，以全链条监管守住安全底线。</p>
-    <p>围绕朝阳建设新质生产力融合发展示范区、国际消费中心城市主承载区和超大城市现代化治理典范区，把经营主体服务、市场秩序和民生安全纳入全局谋划。</p>
+    <h2 id="overview-title">总体遵循与工作主线</h2>
+    <p class="executive-lead">坚持党的全面领导，立足朝阳功能定位，统筹发展和安全，把上位规划要求贯穿全局谋划和实施。</p>
+    <p>围绕新质生产力融合发展示范区、国际消费中心城市主承载区和超大城市现代化治理典范区建设，以良好市场环境服务朝阳高质量发展。</p>
   </header>
   <div class="executive-body">
-    <div class="executive-targets-head">
-      <h3>朝阳区 2030 年规划目标</h3>
-      <a href="#indicators">查看指标</a>
-    </div>
-    <dl class="executive-targets">
-      <div><dt>每万人口高价值发明专利拥有量</dt><dd><strong>240 件左右</strong><span>预期性</span></dd></div>
-      <div><dt>食品安全抽检合格率</dt><dd><strong>&gt;98.7%</strong><span>约束性</span></dd></div>
-      <div><dt>药品抽检合格率</dt><dd><strong>&gt;99%</strong><span>约束性</span></dd></div>
+    <dl class="executive-principles">
+      <div><dt>坚持党的全面领导</dt><dd>把党的领导贯穿规划编制和实施，加强对重大工作的集中统一领导，推动重点部署落实。</dd></div>
+      <div><dt>坚持科学民主依法决策</dt><dd>健全和落实民主集中制，深入调查研究、充分听取意见，把上位要求与朝阳实际结合起来。</dd></div>
+      <div><dt>统筹发展和安全</dt><dd>把服务发展、维护市场秩序、保障民生安全放在一起谋划，加强跨科室、跨部门、区街协同。</dd></div>
     </dl>
-    <h3 class="executive-agenda-title">提请班子研讨</h3>
-    <ul class="executive-agenda">
-      <li>
-        <h4>朝阳特色抓什么</h4>
-        <p>围绕经营主体全生命周期服务、重点商圈消费维权和知识产权服务，研究哪些场景优先形成朝阳做法。</p>
-        <div><a href="#development-threads">促发展</a><a href="#rights-threads">护权益</a></div>
-      </li>
-      <li>
-        <h4>安全资源优先投向哪里</h4>
-        <p>围绕食品药品抽检、重点产品和特种设备风险、重大活动保障，研究抽检力量、基层执法力量和跨部门协同如何安排。</p>
-        <div><a href="#order-threads">稳市场</a><a href="#quality-threads">强支撑</a></div>
-      </li>
-      <li>
-        <h4>跨板块任务如何统筹</h4>
-        <p>研究涉企检查、信用分级和诉求治理如何协同，明确牵头机制、基层市场监管所支撑和规划实施评估安排。</p>
-        <div><a href="#development-t2-district">综合监管</a><a href="#capacity-threads">固根基</a></div>
-      </li>
-    </ul>
+    <details class="executive-evidence" id="overview-evidence">
+      <summary>查看总体原则原文<span class="toggle" aria-hidden="true"></span></summary>
+      <dl>
+        <div id="capacity-t2-national"><dt>国家</dt><dd>健全和落实民主集中制，坚持科学决策、民主决策、依法决策。</dd></div>
+        <div><dt>北京市</dt><dd>完善落实机制，以钉钉子精神抓好党中央重大决策部署落实。</dd></div>
+        <div id="capacity-t1-bureau"><dt>市市场监管局</dt><dd>将党的领导贯穿于规划实施的全过程、各领域、各环节。</dd></div>
+        <div><dt>朝阳区</dt><dd>完善重大决策部署落实机制，加强对重大工作的集中统一领导。健全党委决策咨询机制，充分听取各方面意见，在调查研究基础上提出重大决策方案。</dd><dd>坚持统筹发展和安全。深入落实总体国家安全观，加强维护首都安全战略能力建设，全力防范化解各类风险隐患，增强经济和社会韧性，以高效能治理促进高质量发展和高水平安全良性互动，以新安全格局保障新发展格局。</dd></div>
+      </dl>
+    </details>
+    <p class="executive-bridge">以上原则贯穿促发展、护权益、稳市场、强支撑、固根基五个板块，具体任务与目标见下文。</p>
   </div>
 </section>
 <section aria-labelledby="planning">
@@ -336,32 +320,32 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <details class="task theme-5" id="capacity">
 <summary class="task-head">
 <span class="head-art" aria-hidden="true"><span class="tile"></span></span>
-<span class="task-label"><strong>固根基</strong><span><span class="subject">自身建设</span></span></span>
+<span class="task-label"><strong>固根基</strong><span><span class="subject">基层党建、监管所建设、干部人才</span></span></span>
 <span class="task-toggle toggle" aria-hidden="true"></span>
 </summary>
 <div class="reveal">
 <section class="outline" id="capacity-threads">
 <h3>区局拟纲线索</h3>
-<p>把党的领导贯穿规划实施，夯实基层市场监管所建设，加强专业人才选育和干部队伍建设。</p>
-<div class="thread-controls" role="group" aria-label="按主题标注原文"><button type="button" data-select="" aria-pressed="true">全部</button><button type="button" data-select="capacity-t1" aria-pressed="false">党建与基层</button><button type="button" data-select="capacity-t2" aria-pressed="false">决策与队伍</button></div>
-<div aria-live="polite"><p class="thread-path" data-path="capacity-t1" hidden><a href="#capacity-t1-national">国家</a> · <a href="#capacity-t1-beijing">北京市</a> · <a href="#capacity-t1-bureau">市市场监管局</a> · <a href="#capacity-t1-district">朝阳区</a></p><p class="thread-path" data-path="capacity-t2" hidden><a href="#capacity-t2-national">国家</a> · <a href="#capacity-t2-beijing">北京市</a> · <a href="#capacity-t2-bureau">市市场监管局</a> · <a href="#capacity-t2-district">朝阳区</a></p></div>
+<p>推进基层党建和市场监管所标准化规范化建设，完善干部考核评价和专业人才选育机制。</p>
+<div class="thread-controls" role="group" aria-label="按主题标注原文"><button type="button" data-select="" aria-pressed="true">全部</button><button type="button" data-select="capacity-t1" aria-pressed="false">基层党建与监管所</button><button type="button" data-select="capacity-t2" aria-pressed="false">干部人才</button></div>
+<div aria-live="polite"><p class="thread-path" data-path="capacity-t1" hidden><a href="#capacity-t1-national">国家</a> · <a href="#capacity-t1-beijing">北京市</a> · <a href="#capacity-t1-bureau-practice">市市场监管局</a> · <a href="#capacity-t1-district">朝阳区</a></p><p class="thread-path" data-path="capacity-t2" hidden><a href="#capacity-t2-beijing">北京市</a> · <a href="#capacity-t2-bureau">市市场监管局</a> · <a href="#capacity-t2-district">朝阳区</a></p></div>
 </section>
 
 <section class="source-card" data-source="国">
 <header><h3>国家</h3><a class="thread-back" href="#capacity-threads">返回线索</a></header>
-<blockquote><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-national" data-thread-target="capacity-t2">决策与队伍</span>健全和落实民主集中制，坚持科学决策、民主决策、依法决策。</p><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-national" data-thread-target="capacity-t1">党建与基层</span>统筹推进各领域基层党组织建设，增强党组织政治功能和组织功能，发挥党员先锋模范作用。</p></blockquote>
+<blockquote><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-national" data-thread-target="capacity-t1">基层党建与监管所</span>统筹推进各领域基层党组织建设，增强党组织政治功能和组织功能，发挥党员先锋模范作用。</p></blockquote>
 </section>
 <section class="source-card" data-source="京">
 <header><h3>北京市</h3><a class="thread-back" href="#capacity-threads">返回线索</a></header>
-<blockquote><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-beijing" data-thread-target="capacity-t1">党建与基层</span>增强基层党组织的政治功能和组织功能，推动各层级各领域党组织全面过硬，织密建强上下贯通、执行有力的组织体系。</p><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-beijing" data-thread-target="capacity-t2">决策与队伍</span>坚持正确用人导向，选优配强各级领导班子，建设一支政治过硬、适应新时代要求、具备领导现代化建设能力的干部队伍</p></blockquote>
+<blockquote><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-beijing" data-thread-target="capacity-t1">基层党建与监管所</span>增强基层党组织的政治功能和组织功能，推动各层级各领域党组织全面过硬，织密建强上下贯通、执行有力的组织体系。</p><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-beijing" data-thread-target="capacity-t2">干部人才</span>坚持正确用人导向，选优配强各级领导班子，建设一支政治过硬、适应新时代要求、具备领导现代化建设能力的干部队伍</p></blockquote>
 </section>
 <section class="source-card" data-source="局">
 <header><h3>市市场监管局</h3><a class="thread-back" href="#capacity-threads">返回线索</a></header>
-<blockquote><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-bureau" data-thread-target="capacity-t1">党建与基层</span>将党的领导贯穿于规划实施的全过程、各领域、各环节。</p><p data-thread="capacity-t1"><span class="thread-tag">党建与基层</span>深化基层市场监管所标准化规范化建设。</p><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-bureau" data-thread-target="capacity-t2">决策与队伍</span>健全完善“选育管用”工作机制，培育市场监管高层次执法、科技、国际人才，打造德才兼备的高素质首都市场监管人才队伍。</p></blockquote>
+<blockquote><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-bureau-practice" data-thread-target="capacity-t1">基层党建与监管所</span>深化基层市场监管所标准化规范化建设。</p><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-bureau" data-thread-target="capacity-t2">干部人才</span>健全完善“选育管用”工作机制，培育市场监管高层次执法、科技、国际人才，打造德才兼备的高素质首都市场监管人才队伍。</p></blockquote>
 </section>
 <section class="source-card" data-source="朝">
 <header><h3>朝阳区</h3><a class="thread-back" href="#capacity-threads">返回线索</a></header>
-<blockquote><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-district" data-thread-target="capacity-t2">决策与队伍</span>树立选人用人正确导向，选拔忠诚干净担当的高素质专业化干部，完善干部考核评价体系，推动干部能上能下、能进能出。</p><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-district" data-thread-target="capacity-t1">党建与基层</span>聚焦增强基层党组织政治功能和组织功能，把握首都超大城市特点，坚持以高质量党建引领高质量发展，创新基层党建工作思路和模式，研究深化和完善党的基层组织体系建设工作，统筹推动各领域基层党建提质增效。</p></blockquote>
+<blockquote><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-district" data-thread-target="capacity-t2">干部人才</span>树立选人用人正确导向，选拔忠诚干净担当的高素质专业化干部，完善干部考核评价体系，推动干部能上能下、能进能出。</p><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-district" data-thread-target="capacity-t1">基层党建与监管所</span>聚焦增强基层党组织政治功能和组织功能，把握首都超大城市特点，坚持以高质量党建引领高质量发展，创新基层党建工作思路和模式，研究深化和完善党的基层组织体系建设工作，统筹推动各领域基层党建提质增效。</p></blockquote>
 </section></div>
 </details>
 <details class="ledger" id="indicators">
