@@ -112,6 +112,25 @@ footer a{color:var(--wine);text-underline-offset:4px}
  .cover{print-color-adjust:exact}
  summary,.source-card h3{break-after:avoid}
 }
+
+.outline{margin-bottom:14px;padding:13px 16px 14px;background:var(--tint);border-left:3px solid var(--tone)}
+.outline h3{font:700 20px/1.3 var(--display);color:var(--tone);margin-bottom:5px}
+.outline p{font-size:15px;line-height:1.7}
+.thread-controls{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.thread-controls button{min-height:36px;padding:4px 10px;border:1px solid var(--tone);border-radius:3px;background:#fffdf8;color:var(--tone);font:600 14px/1.35 var(--body);cursor:pointer}
+.thread-controls button[aria-pressed="true"]{background:var(--tone);color:white}
+.thread-controls button:focus-visible{outline:3px solid var(--tone);outline-offset:2px}
+.thread-path{margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
+.thread-path[hidden]{display:none}
+.thread-path a,.thread-back{color:var(--tone);text-underline-offset:3px}
+.thread-path .missing{color:var(--muted)}
+.source-card [data-thread]{padding:3px 8px;border-left:3px solid transparent}
+.source-card .thread-match{background:var(--tint);border-color:var(--tone)}
+.source-card .thread-tag{display:inline-block;margin:0 6px 1px 0;padding:1px 5px;border-radius:2px;color:var(--tone);background:var(--tint);font:650 13px/1.45 var(--body);vertical-align:baseline}
+.source-card .thread-match .thread-tag{background:var(--tone);color:white}
+.thread-back{display:none;margin-left:auto;font-size:14px}
+.task[data-thread-active] .thread-back{display:inline}
+.outline,.source-card .thread-tag{scroll-margin-top:16px}
 </style>
 </head>
 <body>
@@ -132,21 +151,28 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <span class="task-toggle toggle" aria-hidden="true"></span>
 </summary>
 <div class="reveal">
+<section class="outline" id="development-threads">
+<h3>区局拟纲线索</h3>
+<p>以经营主体全生命周期服务为牵引，推进政务服务集成和涉企检查减扰，用信用分级、平台治理、价格监管和诉求办理回应发展需求。</p>
+<div class="thread-controls" role="group" aria-label="按主题标注原文"><button type="button" data-select="" aria-pressed="true">全部</button><button type="button" data-select="development-t1" aria-pressed="false">准入与政务</button><button type="button" data-select="development-t2" aria-pressed="false">综合监管</button><button type="button" data-select="development-t3" aria-pressed="false">信用分级</button><button type="button" data-select="development-t4" aria-pressed="false">价格治理</button><button type="button" data-select="development-t5" aria-pressed="false">平台经济</button><button type="button" data-select="development-t6" aria-pressed="false">诉求治理</button><button type="button" data-select="development-t7" aria-pressed="false">数字广告</button></div>
+<div aria-live="polite"><p class="thread-path" data-path="development-t1" hidden><a href="#development-t1-national">国家</a> · <a href="#development-t1-beijing">北京市</a> · <a href="#development-t1-bureau">市市场监管局</a> · <a href="#development-t1-district">朝阳区</a></p><p class="thread-path" data-path="development-t2" hidden><span class="missing">国家暂无对应摘录</span> · <a href="#development-t2-beijing">北京市</a> · <a href="#development-t2-bureau">市市场监管局</a> · <a href="#development-t2-district">朝阳区</a></p><p class="thread-path" data-path="development-t3" hidden><a href="#development-t3-national">国家</a> · <a href="#development-t3-beijing">北京市</a> · <a href="#development-t3-bureau">市市场监管局</a> · <a href="#development-t3-district">朝阳区</a></p><p class="thread-path" data-path="development-t4" hidden><a href="#development-t4-national">国家</a> · <a href="#development-t4-beijing">北京市</a> · <a href="#development-t4-bureau">市市场监管局</a> · <span class="missing">朝阳区暂无对应摘录</span></p><p class="thread-path" data-path="development-t5" hidden><a href="#development-t5-national">国家</a> · <a href="#development-t5-beijing">北京市</a> · <a href="#development-t5-bureau">市市场监管局</a> · <a href="#development-t5-district">朝阳区</a></p><p class="thread-path" data-path="development-t6" hidden><a href="#development-t6-national">国家</a> · <a href="#development-t6-beijing">北京市</a> · <a href="#development-t6-bureau">市市场监管局</a> · <a href="#development-t6-district">朝阳区</a></p><p class="thread-path" data-path="development-t7" hidden><span class="missing">国家暂无对应摘录</span> · <span class="missing">北京市暂无对应摘录</span> · <a href="#development-t7-bureau">市市场监管局</a> · <a href="#development-t7-district">朝阳区</a></p></div>
+</section>
+
 <section class="source-card" data-source="国">
-<header><h3>国家</h3></header>
-<blockquote><p>完善为企服务体系，健全“高效办成一件事”重点事项清单管理和常态化推进机制</p><p>深化注册资本认缴登记制度改革，持续精简涉企经营许可事项。</p><p>强化全国信用信息共享平台功能，深入推进信用信息归集共享和信用应用拓展，完善守信激励、失信惩戒和信用修复机制。</p><p>完善主要由市场供求关系决定价格机制，加强和改进价格治理。</p><p>推动平台经济创新和健康发展，加强平台企业数据、算法、流量和规则监管，促进平台企业和平台内经营者、劳动者共赢发展。</p><p>强化市民热线等公共服务平台功能，推动“民有所呼、我有所应”。</p></blockquote>
+<header><h3>国家</h3><a class="thread-back" href="#development-threads">返回线索</a></header>
+<blockquote><p data-thread="development-t1"><span class="thread-tag" id="development-t1-national" data-thread-target="development-t1">准入与政务</span>完善为企服务体系，健全“高效办成一件事”重点事项清单管理和常态化推进机制</p><p data-thread="development-t1"><span class="thread-tag">准入与政务</span>深化注册资本认缴登记制度改革，持续精简涉企经营许可事项。</p><p data-thread="development-t3"><span class="thread-tag" id="development-t3-national" data-thread-target="development-t3">信用分级</span>强化全国信用信息共享平台功能，深入推进信用信息归集共享和信用应用拓展，完善守信激励、失信惩戒和信用修复机制。</p><p data-thread="development-t4"><span class="thread-tag" id="development-t4-national" data-thread-target="development-t4">价格治理</span>完善主要由市场供求关系决定价格机制，加强和改进价格治理。</p><p data-thread="development-t5"><span class="thread-tag" id="development-t5-national" data-thread-target="development-t5">平台经济</span>推动平台经济创新和健康发展，加强平台企业数据、算法、流量和规则监管，促进平台企业和平台内经营者、劳动者共赢发展。</p><p data-thread="development-t6"><span class="thread-tag" id="development-t6-national" data-thread-target="development-t6">诉求治理</span>强化市民热线等公共服务平台功能，推动“民有所呼、我有所应”。</p></blockquote>
 </section>
 <section class="source-card" data-source="京">
-<header><h3>北京市</h3></header>
-<blockquote><p>进一步完善注册资本认缴登记制度，推进经营范围规范化和登记住所标准化改革，优化企业注销流程，进一步畅通无效经营主体市场化退出渠道。</p><p>提高政务服务集成化水平，加快建设全市一体化政务服务事项办理平台，在更多领域和更大范围常态化推进“高效办成一件事”。</p><p>坚持党建引领，强化12345市民服务热线平台功能，推进全流程规范化建设。</p><p>深入推进一体化综合监管改革，强化“扫码检查”全覆盖，推进智能化、无感化监管，非现场检查量占比达到80%。</p><p>探索联合发布统一的监管政策及标准规范，构建信用监管共同体。</p><p>强化价格治理能力建设，优化市场价格监管，维护市场价格秩序。</p><p>健全平台企业监管机制，推动平台经济创新和健康发展。</p></blockquote>
+<header><h3>北京市</h3><a class="thread-back" href="#development-threads">返回线索</a></header>
+<blockquote><p data-thread="development-t1"><span class="thread-tag" id="development-t1-beijing" data-thread-target="development-t1">准入与政务</span>进一步完善注册资本认缴登记制度，推进经营范围规范化和登记住所标准化改革，优化企业注销流程，进一步畅通无效经营主体市场化退出渠道。</p><p data-thread="development-t1"><span class="thread-tag">准入与政务</span>提高政务服务集成化水平，加快建设全市一体化政务服务事项办理平台，在更多领域和更大范围常态化推进“高效办成一件事”。</p><p data-thread="development-t6"><span class="thread-tag" id="development-t6-beijing" data-thread-target="development-t6">诉求治理</span>坚持党建引领，强化12345市民服务热线平台功能，推进全流程规范化建设。</p><p data-thread="development-t2"><span class="thread-tag" id="development-t2-beijing" data-thread-target="development-t2">综合监管</span>深入推进一体化综合监管改革，强化“扫码检查”全覆盖，推进智能化、无感化监管，非现场检查量占比达到80%。</p><p data-thread="development-t3"><span class="thread-tag" id="development-t3-beijing" data-thread-target="development-t3">信用分级</span>探索联合发布统一的监管政策及标准规范，构建信用监管共同体。</p><p data-thread="development-t4"><span class="thread-tag" id="development-t4-beijing" data-thread-target="development-t4">价格治理</span>强化价格治理能力建设，优化市场价格监管，维护市场价格秩序。</p><p data-thread="development-t5"><span class="thread-tag" id="development-t5-beijing" data-thread-target="development-t5">平台经济</span>健全平台企业监管机制，推动平台经济创新和健康发展。</p></blockquote>
 </section>
 <section class="source-card" data-source="局">
-<header><h3>市市场监管局</h3></header>
-<blockquote><p>持续优化“高效办成一件事”场景建设，丰富数智政务服务供给，深化“一网通办”，升级“AI+登记注册”服务模式</p><p>深化注册资本认缴登记制度改革，引导企业依法履行出资义务。</p><p>推广“综合查一次”，实现“进一次门，查多项事”。完善“无事不扰”企业清单动态管理机制，提高动态管理的科学性。</p><p>深化“风险+信用”分级分类结果差异化应用，打造信用标签标注管理体系。</p><p>深入治理医疗、养老、公用事业等重要民生领域价格违法行为</p><p>注重纠纷源头化解，依托全国12315平台在线消费纠纷解决和市场监管领域“诉求即办直通车”机制，引导企业高效办理群众诉求。</p><p>坚持“线上线下一体化”监管，深化多部门协同和跨区域协作。</p><p>加快建设北京国家数字广告产业园试点（一园多址），推动更多优质数字广告企业在京集聚发展。</p></blockquote>
+<header><h3>市市场监管局</h3><a class="thread-back" href="#development-threads">返回线索</a></header>
+<blockquote><p data-thread="development-t1"><span class="thread-tag" id="development-t1-bureau" data-thread-target="development-t1">准入与政务</span>持续优化“高效办成一件事”场景建设，丰富数智政务服务供给，深化“一网通办”，升级“AI+登记注册”服务模式</p><p data-thread="development-t1"><span class="thread-tag">准入与政务</span>深化注册资本认缴登记制度改革，引导企业依法履行出资义务。</p><p data-thread="development-t2"><span class="thread-tag" id="development-t2-bureau" data-thread-target="development-t2">综合监管</span>推广“综合查一次”，实现“进一次门，查多项事”。完善“无事不扰”企业清单动态管理机制，提高动态管理的科学性。</p><p data-thread="development-t3"><span class="thread-tag" id="development-t3-bureau" data-thread-target="development-t3">信用分级</span>深化“风险+信用”分级分类结果差异化应用，打造信用标签标注管理体系。</p><p data-thread="development-t4"><span class="thread-tag" id="development-t4-bureau" data-thread-target="development-t4">价格治理</span>深入治理医疗、养老、公用事业等重要民生领域价格违法行为</p><p data-thread="development-t6"><span class="thread-tag" id="development-t6-bureau" data-thread-target="development-t6">诉求治理</span>注重纠纷源头化解，依托全国12315平台在线消费纠纷解决和市场监管领域“诉求即办直通车”机制，引导企业高效办理群众诉求。</p><p data-thread="development-t5"><span class="thread-tag" id="development-t5-bureau" data-thread-target="development-t5">平台经济</span>坚持“线上线下一体化”监管，深化多部门协同和跨区域协作。</p><p data-thread="development-t7"><span class="thread-tag" id="development-t7-bureau" data-thread-target="development-t7">数字广告</span>加快建设北京国家数字广告产业园试点（一园多址），推动更多优质数字广告企业在京集聚发展。</p></blockquote>
 </section>
 <section class="source-card" data-source="朝">
-<header><h3>朝阳区</h3></header>
-<blockquote><p>聚焦企业全生命周期，持续推动经营主体设立、变更、退出更加便利高效。</p><p>深化政务服务全流程改革，在更多领域和更大范围推进“高效办成一件事”，推动跨部门集成服务，探索朝阳特色“一件事”场景。</p><p>全面推进严格规范公正文明执法，深入推进一体化综合监管，持续扩大“无事不扰”企业范围，试行“综合查一次”，强化非现场监管</p><p>推进社会信用体系建设，通过技术赋能与制度创新，加强信用信息归集共享、场景拓展，构建覆盖政府、企业、个人的信用监管机制，提高社会诚信水平。</p><p>深化党建引领接诉即办改革，用好“吹哨报到”“每月一题”等机制，将民生诉求自觉转化为主动治理任务。</p><p>持续壮大互联网消费，积极培育引进一批平台型、品牌型电商企业，深化特色直播电商基地建设，促进线上线下融合发展。</p><p>引导传统广告行业提质升级，建好数字广告产业园，培育一批市场占有率高的数字广告、数字营销企业。</p></blockquote>
+<header><h3>朝阳区</h3><a class="thread-back" href="#development-threads">返回线索</a></header>
+<blockquote><p data-thread="development-t1"><span class="thread-tag" id="development-t1-district" data-thread-target="development-t1">准入与政务</span>聚焦企业全生命周期，持续推动经营主体设立、变更、退出更加便利高效。</p><p data-thread="development-t1"><span class="thread-tag">准入与政务</span>深化政务服务全流程改革，在更多领域和更大范围推进“高效办成一件事”，推动跨部门集成服务，探索朝阳特色“一件事”场景。</p><p data-thread="development-t2"><span class="thread-tag" id="development-t2-district" data-thread-target="development-t2">综合监管</span>全面推进严格规范公正文明执法，深入推进一体化综合监管，持续扩大“无事不扰”企业范围，试行“综合查一次”，强化非现场监管</p><p data-thread="development-t3"><span class="thread-tag" id="development-t3-district" data-thread-target="development-t3">信用分级</span>推进社会信用体系建设，通过技术赋能与制度创新，加强信用信息归集共享、场景拓展，构建覆盖政府、企业、个人的信用监管机制，提高社会诚信水平。</p><p data-thread="development-t6"><span class="thread-tag" id="development-t6-district" data-thread-target="development-t6">诉求治理</span>深化党建引领接诉即办改革，用好“吹哨报到”“每月一题”等机制，将民生诉求自觉转化为主动治理任务。</p><p data-thread="development-t5"><span class="thread-tag" id="development-t5-district" data-thread-target="development-t5">平台经济</span>持续壮大互联网消费，积极培育引进一批平台型、品牌型电商企业，深化特色直播电商基地建设，促进线上线下融合发展。</p><p data-thread="development-t7"><span class="thread-tag" id="development-t7-district" data-thread-target="development-t7">数字广告</span>引导传统广告行业提质升级，建好数字广告产业园，培育一批市场占有率高的数字广告、数字营销企业。</p></blockquote>
 </section></div>
 </details>
 <details class="task theme-3" id="rights">
@@ -156,21 +182,28 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <span class="task-toggle toggle" aria-hidden="true"></span>
 </summary>
 <div class="reveal">
+<section class="outline" id="rights-threads">
+<h3>区局拟纲线索</h3>
+<p>围绕放心消费、药品安全和知识产权保护，完善消费维权和预付式消费治理，推进药品全生命周期监管，落实柔性执法与行刑衔接。</p>
+<div class="thread-controls" role="group" aria-label="按主题标注原文"><button type="button" data-select="" aria-pressed="true">全部</button><button type="button" data-select="rights-t1" aria-pressed="false">消费维权</button><button type="button" data-select="rights-t2" aria-pressed="false">药品安全</button><button type="button" data-select="rights-t3" aria-pressed="false">知识产权</button><button type="button" data-select="rights-t4" aria-pressed="false">规范执法</button></div>
+<div aria-live="polite"><p class="thread-path" data-path="rights-t1" hidden><a href="#rights-t1-national">国家</a> · <a href="#rights-t1-beijing">北京市</a> · <a href="#rights-t1-bureau">市市场监管局</a> · <a href="#rights-t1-district">朝阳区</a></p><p class="thread-path" data-path="rights-t2" hidden><a href="#rights-t2-national">国家</a> · <a href="#rights-t2-beijing">北京市</a> · <a href="#rights-t2-bureau">市市场监管局</a> · <a href="#rights-t2-district">朝阳区</a></p><p class="thread-path" data-path="rights-t3" hidden><a href="#rights-t3-national">国家</a> · <a href="#rights-t3-beijing">北京市</a> · <a href="#rights-t3-bureau">市市场监管局</a> · <a href="#rights-t3-district">朝阳区</a></p><p class="thread-path" data-path="rights-t4" hidden><a href="#rights-t4-national">国家</a> · <a href="#rights-t4-beijing">北京市</a> · <a href="#rights-t4-bureau">市市场监管局</a> · <a href="#rights-t4-district">朝阳区</a></p></div>
+</section>
+
 <section class="source-card" data-source="国">
-<header><h3>国家</h3></header>
-<blockquote><p>强化消费者权益保护，畅通消费者投诉和维权渠道，规范网络销售、直播带货等经营活动，健全预付式消费监管模式。</p><p>完善严格高效的药品监管，深入实施药品标准提高行动计划，强化高风险产品抽检抽查。</p><p>完善新兴领域知识产权保护制度，健全知识产权公共服务体系和技术交易服务平台网络，实施新产业标准化领航工程。</p><p>统一市场监管执法，完善行政裁量权基准制度，推进行政处罚和刑事处罚双向衔接。</p></blockquote>
+<header><h3>国家</h3><a class="thread-back" href="#rights-threads">返回线索</a></header>
+<blockquote><p data-thread="rights-t1"><span class="thread-tag" id="rights-t1-national" data-thread-target="rights-t1">消费维权</span>强化消费者权益保护，畅通消费者投诉和维权渠道，规范网络销售、直播带货等经营活动，健全预付式消费监管模式。</p><p data-thread="rights-t2"><span class="thread-tag" id="rights-t2-national" data-thread-target="rights-t2">药品安全</span>完善严格高效的药品监管，深入实施药品标准提高行动计划，强化高风险产品抽检抽查。</p><p data-thread="rights-t3"><span class="thread-tag" id="rights-t3-national" data-thread-target="rights-t3">知识产权</span>完善新兴领域知识产权保护制度，健全知识产权公共服务体系和技术交易服务平台网络，实施新产业标准化领航工程。</p><p data-thread="rights-t4"><span class="thread-tag" id="rights-t4-national" data-thread-target="rights-t4">规范执法</span>统一市场监管执法，完善行政裁量权基准制度，推进行政处罚和刑事处罚双向衔接。</p></blockquote>
 </section>
 <section class="source-card" data-source="京">
-<header><h3>北京市</h3></header>
-<blockquote><p>强化重点行业领域预付式消费资金监管，加强缺陷消费品召回管理。畅通消费者维权渠道，创新消费纠纷多元化解模式，推动电商平台消费纠纷快速处理。</p><p>强化药品全生命周期监管，提升检验检测能力</p><p>加强知识产权司法保护，建立重点产业海外维权援助机制，支持在京开展国际知识产权仲裁业务，为企业“走出去”保驾护航。</p><p>健全规范涉企执法长效机制，更多采用柔性执法和服务型执法，让执法更有温度。</p></blockquote>
+<header><h3>北京市</h3><a class="thread-back" href="#rights-threads">返回线索</a></header>
+<blockquote><p data-thread="rights-t1"><span class="thread-tag" id="rights-t1-beijing" data-thread-target="rights-t1">消费维权</span>强化重点行业领域预付式消费资金监管，加强缺陷消费品召回管理。畅通消费者维权渠道，创新消费纠纷多元化解模式，推动电商平台消费纠纷快速处理。</p><p data-thread="rights-t2"><span class="thread-tag" id="rights-t2-beijing" data-thread-target="rights-t2">药品安全</span>强化药品全生命周期监管，提升检验检测能力</p><p data-thread="rights-t3"><span class="thread-tag" id="rights-t3-beijing" data-thread-target="rights-t3">知识产权</span>加强知识产权司法保护，建立重点产业海外维权援助机制，支持在京开展国际知识产权仲裁业务，为企业“走出去”保驾护航。</p><p data-thread="rights-t4"><span class="thread-tag" id="rights-t4-beijing" data-thread-target="rights-t4">规范执法</span>健全规范涉企执法长效机制，更多采用柔性执法和服务型执法，让执法更有温度。</p></blockquote>
 </section>
 <section class="source-card" data-source="局">
-<header><h3>市市场监管局</h3></header>
-<blockquote><p>统筹推进教育培训、体育健身、生活性服务业等重点行业领域预付式消费资金监管。</p><p>完善药品安全责任体系，健全协同发展和治理机制，深化跨区域、跨层级、跨部门协同监管。</p><p>严厉打击商标侵权、冒用地理标志、计量认证领域出具虚假数据报告等违法乱象</p><p>强化行刑衔接、行纪贯通，持续推进柔性执法，全面构建“预防为主、轻微免罚、重违严惩、过罚相当、事后回访”的服务型执法模式。</p></blockquote>
+<header><h3>市市场监管局</h3><a class="thread-back" href="#rights-threads">返回线索</a></header>
+<blockquote><p data-thread="rights-t1"><span class="thread-tag" id="rights-t1-bureau" data-thread-target="rights-t1">消费维权</span>统筹推进教育培训、体育健身、生活性服务业等重点行业领域预付式消费资金监管。</p><p data-thread="rights-t2"><span class="thread-tag" id="rights-t2-bureau" data-thread-target="rights-t2">药品安全</span>完善药品安全责任体系，健全协同发展和治理机制，深化跨区域、跨层级、跨部门协同监管。</p><p data-thread="rights-t3"><span class="thread-tag" id="rights-t3-bureau" data-thread-target="rights-t3">知识产权</span>严厉打击商标侵权、冒用地理标志、计量认证领域出具虚假数据报告等违法乱象</p><p data-thread="rights-t4"><span class="thread-tag" id="rights-t4-bureau" data-thread-target="rights-t4">规范执法</span>强化行刑衔接、行纪贯通，持续推进柔性执法，全面构建“预防为主、轻微免罚、重违严惩、过罚相当、事后回访”的服务型执法模式。</p></blockquote>
 </section>
 <section class="source-card" data-source="朝">
-<header><h3>朝阳区</h3></header>
-<blockquote><p>探索建立快捷高效的消费投诉维权机制，在重点商圈设立“消费者维权站”，优化预付费消费环境。</p><p>持续抓好药品全生命周期监管。</p><p>打造知识产权创造、运用、保护、管理、服务“五位一体”的工作体系，完善供需匹配的服务供给机制，加强海外知识产权纠纷应对指导。</p><p>健全轻微违法行为容错纠错机制，完善行政执法与刑事司法双向衔接机制。</p></blockquote>
+<header><h3>朝阳区</h3><a class="thread-back" href="#rights-threads">返回线索</a></header>
+<blockquote><p data-thread="rights-t1"><span class="thread-tag" id="rights-t1-district" data-thread-target="rights-t1">消费维权</span>探索建立快捷高效的消费投诉维权机制，在重点商圈设立“消费者维权站”，优化预付费消费环境。</p><p data-thread="rights-t2"><span class="thread-tag" id="rights-t2-district" data-thread-target="rights-t2">药品安全</span>持续抓好药品全生命周期监管。</p><p data-thread="rights-t3"><span class="thread-tag" id="rights-t3-district" data-thread-target="rights-t3">知识产权</span>打造知识产权创造、运用、保护、管理、服务“五位一体”的工作体系，完善供需匹配的服务供给机制，加强海外知识产权纠纷应对指导。</p><p data-thread="rights-t4"><span class="thread-tag" id="rights-t4-district" data-thread-target="rights-t4">规范执法</span>健全轻微违法行为容错纠错机制，完善行政执法与刑事司法双向衔接机制。</p></blockquote>
 </section></div>
 </details>
 <details class="task theme-2" id="order">
@@ -180,21 +213,28 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <span class="task-toggle toggle" aria-hidden="true"></span>
 </summary>
 <div class="reveal">
+<section class="outline" id="order-threads">
+<h3>区局拟纲线索</h3>
+<p>落实公平竞争审查和反不正当竞争执法，抓好食品全链条监管和追溯，把源头管控、过程监督与跨部门协同贯穿重大活动保障。</p>
+<div class="thread-controls" role="group" aria-label="按主题标注原文"><button type="button" data-select="" aria-pressed="true">全部</button><button type="button" data-select="order-t1" aria-pressed="false">公平竞争</button><button type="button" data-select="order-t2" aria-pressed="false">食品安全</button><button type="button" data-select="order-t3" aria-pressed="false">重大活动保障</button></div>
+<div aria-live="polite"><p class="thread-path" data-path="order-t1" hidden><a href="#order-t1-national">国家</a> · <a href="#order-t1-beijing">北京市</a> · <a href="#order-t1-bureau">市市场监管局</a> · <a href="#order-t1-district">朝阳区</a></p><p class="thread-path" data-path="order-t2" hidden><a href="#order-t2-national">国家</a> · <a href="#order-t2-beijing">北京市</a> · <a href="#order-t2-bureau">市市场监管局</a> · <a href="#order-t2-district">朝阳区</a></p><p class="thread-path" data-path="order-t3" hidden><span class="missing">国家暂无对应摘录</span> · <a href="#order-t3-beijing">北京市</a> · <a href="#order-t3-bureau">市市场监管局</a> · <a href="#order-t3-district">朝阳区</a></p></div>
+</section>
+
 <section class="source-card" data-source="国">
-<header><h3>国家</h3></header>
-<blockquote><p>制定重点领域公平竞争合规指引，强化公平竞争审查刚性约束，消除要素获取、资质认定、招标投标、政府采购等方面壁垒。</p><p>健全食品药品全链条全过程监管机制，完善食品药品安全责任体系。加强从农田到餐桌的食品安全监管，强化风险源头管控，提高协同监管和智慧监管水平，深化重点问题农产品药残治理。</p></blockquote>
+<header><h3>国家</h3><a class="thread-back" href="#order-threads">返回线索</a></header>
+<blockquote><p data-thread="order-t1"><span class="thread-tag" id="order-t1-national" data-thread-target="order-t1">公平竞争</span>制定重点领域公平竞争合规指引，强化公平竞争审查刚性约束，消除要素获取、资质认定、招标投标、政府采购等方面壁垒。</p><p data-thread="order-t2"><span class="thread-tag" id="order-t2-national" data-thread-target="order-t2">食品安全</span>健全食品药品全链条全过程监管机制，完善食品药品安全责任体系。加强从农田到餐桌的食品安全监管，强化风险源头管控，提高协同监管和智慧监管水平，深化重点问题农产品药残治理。</p></blockquote>
 </section>
 <section class="source-card" data-source="京">
-<header><h3>北京市</h3></header>
-<blockquote><p>加强公平竞争审查刚性约束，健全审查抽查、核查整改机制。强化反垄断和反不正当竞争，形成优质优价、良性竞争的市场秩序。</p><p>制订完善重点食品标准和“京品”特色标准，建立全国领先的食品安全标准体系。</p><p>系统精准完善重大活动全流程、全要素、高品质服务，围绕观礼、会务、交通、安全、景观等方面打磨细节，做到有机衔接、运行顺畅，全面呈现最佳活动效果。</p></blockquote>
+<header><h3>北京市</h3><a class="thread-back" href="#order-threads">返回线索</a></header>
+<blockquote><p data-thread="order-t1"><span class="thread-tag" id="order-t1-beijing" data-thread-target="order-t1">公平竞争</span>加强公平竞争审查刚性约束，健全审查抽查、核查整改机制。强化反垄断和反不正当竞争，形成优质优价、良性竞争的市场秩序。</p><p data-thread="order-t2"><span class="thread-tag" id="order-t2-beijing" data-thread-target="order-t2">食品安全</span>制订完善重点食品标准和“京品”特色标准，建立全国领先的食品安全标准体系。</p><p data-thread="order-t3"><span class="thread-tag" id="order-t3-beijing" data-thread-target="order-t3">重大活动保障</span>系统精准完善重大活动全流程、全要素、高品质服务，围绕观礼、会务、交通、安全、景观等方面打磨细节，做到有机衔接、运行顺畅，全面呈现最佳活动效果。</p></blockquote>
 </section>
 <section class="source-card" data-source="局">
-<header><h3>市市场监管局</h3></header>
-<blockquote><p>强化公平竞争审查刚性约束，常态化开展公平竞争审查抽查，加强核查整改与举报监督。健全重大政策措施会审机制，压实审查主体责任，规范会审程序。</p><p>构建食品安全全链条监管体系。深化食品全链条安全监管框图应用，靶向优化监管措施。</p><p>健全统一协调、高效运行的重大活动服务保障体系。强化食品生产经营企业源头管控，加强过程监督和抽检监测，保障食品安全。</p></blockquote>
+<header><h3>市市场监管局</h3><a class="thread-back" href="#order-threads">返回线索</a></header>
+<blockquote><p data-thread="order-t1"><span class="thread-tag" id="order-t1-bureau" data-thread-target="order-t1">公平竞争</span>强化公平竞争审查刚性约束，常态化开展公平竞争审查抽查，加强核查整改与举报监督。健全重大政策措施会审机制，压实审查主体责任，规范会审程序。</p><p data-thread="order-t2"><span class="thread-tag" id="order-t2-bureau" data-thread-target="order-t2">食品安全</span>构建食品安全全链条监管体系。深化食品全链条安全监管框图应用，靶向优化监管措施。</p><p data-thread="order-t3"><span class="thread-tag" id="order-t3-bureau" data-thread-target="order-t3">重大活动保障</span>健全统一协调、高效运行的重大活动服务保障体系。强化食品生产经营企业源头管控，加强过程监督和抽检监测，保障食品安全。</p></blockquote>
 </section>
 <section class="source-card" data-source="朝">
-<header><h3>朝阳区</h3></header>
-<blockquote><p>积极融入和服务全国统一大市场建设，落实公平竞争审查制度，破除市场准入、政府采购、招投标等领域隐性门槛和壁垒。</p><p>强化反不正当竞争执法，综合整治“内卷式”竞争，形成优质优价、良性竞争的市场秩序。</p><p>构建食品全过程追溯体系，稳妥推进重点场所食品集中供应，规范网络食品销售等新业态。</p><p>强化重大活动服务保障能力，健全跨部门协同保障体系，实现安保、交通、礼宾、市容等全要素高效联动，精心服务中非合作论坛等重要国际活动。</p></blockquote>
+<header><h3>朝阳区</h3><a class="thread-back" href="#order-threads">返回线索</a></header>
+<blockquote><p data-thread="order-t1"><span class="thread-tag" id="order-t1-district" data-thread-target="order-t1">公平竞争</span>积极融入和服务全国统一大市场建设，落实公平竞争审查制度，破除市场准入、政府采购、招投标等领域隐性门槛和壁垒。</p><p data-thread="order-t1"><span class="thread-tag">公平竞争</span>强化反不正当竞争执法，综合整治“内卷式”竞争，形成优质优价、良性竞争的市场秩序。</p><p data-thread="order-t2"><span class="thread-tag" id="order-t2-district" data-thread-target="order-t2">食品安全</span>构建食品全过程追溯体系，稳妥推进重点场所食品集中供应，规范网络食品销售等新业态。</p><p data-thread="order-t3"><span class="thread-tag" id="order-t3-district" data-thread-target="order-t3">重大活动保障</span>强化重大活动服务保障能力，健全跨部门协同保障体系，实现安保、交通、礼宾、市容等全要素高效联动，精心服务中非合作论坛等重要国际活动。</p></blockquote>
 </section></div>
 </details>
 <details class="task theme-1" id="quality">
@@ -204,21 +244,28 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <span class="task-toggle toggle" aria-hidden="true"></span>
 </summary>
 <div class="reveal">
+<section class="outline" id="quality-threads">
+<h3>区局拟纲线索</h3>
+<p>以质量、标准、计量和检验检测认证支撑产业发展，结合朝阳重点领域需求推进标准和智能计量应用，加强重点产品及特种设备风险预防。</p>
+<div class="thread-controls" role="group" aria-label="按主题标注原文"><button type="button" data-select="" aria-pressed="true">全部</button><button type="button" data-select="quality-t1" aria-pressed="false">质量与标准</button><button type="button" data-select="quality-t2" aria-pressed="false">计量应用</button><button type="button" data-select="quality-t3" aria-pressed="false">重点产品安全</button><button type="button" data-select="quality-t4" aria-pressed="false">特种设备安全</button></div>
+<div aria-live="polite"><p class="thread-path" data-path="quality-t1" hidden><a href="#quality-t1-national">国家</a> · <a href="#quality-t1-beijing">北京市</a> · <a href="#quality-t1-bureau">市市场监管局</a> · <a href="#quality-t1-district">朝阳区</a></p><p class="thread-path" data-path="quality-t2" hidden><a href="#quality-t2-national">国家</a> · <a href="#quality-t2-beijing">北京市</a> · <a href="#quality-t2-bureau">市市场监管局</a> · <a href="#quality-t2-district">朝阳区</a></p><p class="thread-path" data-path="quality-t3" hidden><span class="missing">国家暂无对应摘录</span> · <a href="#quality-t3-beijing">北京市</a> · <a href="#quality-t3-bureau">市市场监管局</a> · <a href="#quality-t3-district">朝阳区</a></p><p class="thread-path" data-path="quality-t4" hidden><a href="#quality-t4-national">国家</a> · <span class="missing">北京市暂无对应摘录</span> · <a href="#quality-t4-bureau">市市场监管局</a> · <a href="#quality-t4-district">朝阳区</a></p></div>
+</section>
+
 <section class="source-card" data-source="国">
-<header><h3>国家</h3></header>
-<blockquote><p>加强全面质量管理，深入实施制造业卓越质量工程，增强质量技术基础能力。</p><p>完善协调统一的国家标准体系，扩大强制性国家标准覆盖面，推进新兴产业标准建设，提升标准国际化水平。推进检验检测认证资源共享、资质互认和结果通用。</p><p>推进量子计量、原位计量等新型计量校准仪器仪表攻关。</p><p>提升重要基础设施本质安全水平，加快矿山、危险化学品、特种设备等领域高风险工艺和装备淘汰更新</p></blockquote>
+<header><h3>国家</h3><a class="thread-back" href="#quality-threads">返回线索</a></header>
+<blockquote><p data-thread="quality-t1"><span class="thread-tag" id="quality-t1-national" data-thread-target="quality-t1">质量与标准</span>加强全面质量管理，深入实施制造业卓越质量工程，增强质量技术基础能力。</p><p data-thread="quality-t1"><span class="thread-tag">质量与标准</span>完善协调统一的国家标准体系，扩大强制性国家标准覆盖面，推进新兴产业标准建设，提升标准国际化水平。推进检验检测认证资源共享、资质互认和结果通用。</p><p data-thread="quality-t2"><span class="thread-tag" id="quality-t2-national" data-thread-target="quality-t2">计量应用</span>推进量子计量、原位计量等新型计量校准仪器仪表攻关。</p><p data-thread="quality-t4"><span class="thread-tag" id="quality-t4-national" data-thread-target="quality-t4">特种设备安全</span>提升重要基础设施本质安全水平，加快矿山、危险化学品、特种设备等领域高风险工艺和装备淘汰更新</p></blockquote>
 </section>
 <section class="source-card" data-source="京">
-<header><h3>北京市</h3></header>
-<blockquote><p>推动研究开发服务、技术转移转化服务、检验检测认证服务与新兴产业融合发展</p><p>建设全市碳足迹背景数据库，落实产品碳标识认证制度，在新能源汽车、氢能和电子电器等领域率先开展产品碳足迹核算和标识认证。</p><p>公共建筑全部实现热计量供热，推动居民建筑热计量管理。</p><p>深化燃气、电动自行车、动火作业等“一件事”全链条治理</p></blockquote>
+<header><h3>北京市</h3><a class="thread-back" href="#quality-threads">返回线索</a></header>
+<blockquote><p data-thread="quality-t1"><span class="thread-tag" id="quality-t1-beijing" data-thread-target="quality-t1">质量与标准</span>推动研究开发服务、技术转移转化服务、检验检测认证服务与新兴产业融合发展</p><p data-thread="quality-t1"><span class="thread-tag">质量与标准</span>建设全市碳足迹背景数据库，落实产品碳标识认证制度，在新能源汽车、氢能和电子电器等领域率先开展产品碳足迹核算和标识认证。</p><p data-thread="quality-t2"><span class="thread-tag" id="quality-t2-beijing" data-thread-target="quality-t2">计量应用</span>公共建筑全部实现热计量供热，推动居民建筑热计量管理。</p><p data-thread="quality-t3"><span class="thread-tag" id="quality-t3-beijing" data-thread-target="quality-t3">重点产品安全</span>深化燃气、电动自行车、动火作业等“一件事”全链条治理</p></blockquote>
 </section>
 <section class="source-card" data-source="局">
-<header><h3>市市场监管局</h3></header>
-<blockquote><p>开展质量基础设施助力产业链供应链质量联动提升行动，深化协作机器人、生物医药等产业链质量共性技术研发攻关和应用验证。</p><p>实施“一产业一标准体系”赋能行动，推进新一代信息技术、人工智能等高精尖产业和未来产业标准研制。</p><p>打造“数智化计量”新模式，加强重点器具生产、销售、使用全链条监管。</p><p>提高检验检测认证监管精准性和有效性，提升检验检测认证机构数字化管理能力。</p><p>深化电动自行车、燃气器具、儿童和学生用品等重点工业产品安全隐患整治。</p><p>推进双重预防机制建设，覆盖各类高风险特种设备，推动特种设备安全从被动应对向主动防范、事前预防转变。</p></blockquote>
+<header><h3>市市场监管局</h3><a class="thread-back" href="#quality-threads">返回线索</a></header>
+<blockquote><p data-thread="quality-t1"><span class="thread-tag" id="quality-t1-bureau" data-thread-target="quality-t1">质量与标准</span>开展质量基础设施助力产业链供应链质量联动提升行动，深化协作机器人、生物医药等产业链质量共性技术研发攻关和应用验证。</p><p data-thread="quality-t1"><span class="thread-tag">质量与标准</span>实施“一产业一标准体系”赋能行动，推进新一代信息技术、人工智能等高精尖产业和未来产业标准研制。</p><p data-thread="quality-t2"><span class="thread-tag" id="quality-t2-bureau" data-thread-target="quality-t2">计量应用</span>打造“数智化计量”新模式，加强重点器具生产、销售、使用全链条监管。</p><p data-thread="quality-t1"><span class="thread-tag">质量与标准</span>提高检验检测认证监管精准性和有效性，提升检验检测认证机构数字化管理能力。</p><p data-thread="quality-t3"><span class="thread-tag" id="quality-t3-bureau" data-thread-target="quality-t3">重点产品安全</span>深化电动自行车、燃气器具、儿童和学生用品等重点工业产品安全隐患整治。</p><p data-thread="quality-t4"><span class="thread-tag" id="quality-t4-bureau" data-thread-target="quality-t4">特种设备安全</span>推进双重预防机制建设，覆盖各类高风险特种设备，推动特种设备安全从被动应对向主动防范、事前预防转变。</p></blockquote>
 </section>
 <section class="source-card" data-source="朝">
-<header><h3>朝阳区</h3></header>
-<blockquote><p>深入实施质量提升行动，健全重点领域标准体系。</p><p>完善天然气管网和输配系统，探索推广燃气智能计量与监测设备应用。</p><p>持续推进老旧小区综合整治，支持加装电梯、更新管线、完善配套公共服务设施</p><p>持续实施城镇燃气、电动自行车、危险化学品等“一件事”全链条治理，推动重大火灾事故隐患动态清零，坚决防范遏制重特大事故。</p></blockquote>
+<header><h3>朝阳区</h3><a class="thread-back" href="#quality-threads">返回线索</a></header>
+<blockquote><p data-thread="quality-t1"><span class="thread-tag" id="quality-t1-district" data-thread-target="quality-t1">质量与标准</span>深入实施质量提升行动，健全重点领域标准体系。</p><p data-thread="quality-t2"><span class="thread-tag" id="quality-t2-district" data-thread-target="quality-t2">计量应用</span>完善天然气管网和输配系统，探索推广燃气智能计量与监测设备应用。</p><p data-thread="quality-t4"><span class="thread-tag" id="quality-t4-district" data-thread-target="quality-t4">特种设备安全</span>持续推进老旧小区综合整治，支持加装电梯、更新管线、完善配套公共服务设施</p><p data-thread="quality-t3"><span class="thread-tag" id="quality-t3-district" data-thread-target="quality-t3">重点产品安全</span>持续实施城镇燃气、电动自行车、危险化学品等“一件事”全链条治理，推动重大火灾事故隐患动态清零，坚决防范遏制重特大事故。</p></blockquote>
 </section></div>
 </details>
 <details class="task theme-5" id="capacity">
@@ -228,21 +275,28 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <span class="task-toggle toggle" aria-hidden="true"></span>
 </summary>
 <div class="reveal">
+<section class="outline" id="capacity-threads">
+<h3>区局拟纲线索</h3>
+<p>把党的领导贯穿规划实施，夯实基层市场监管所建设，加强专业人才选育和干部队伍建设。</p>
+<div class="thread-controls" role="group" aria-label="按主题标注原文"><button type="button" data-select="" aria-pressed="true">全部</button><button type="button" data-select="capacity-t1" aria-pressed="false">党建与基层</button><button type="button" data-select="capacity-t2" aria-pressed="false">决策与队伍</button></div>
+<div aria-live="polite"><p class="thread-path" data-path="capacity-t1" hidden><a href="#capacity-t1-national">国家</a> · <a href="#capacity-t1-beijing">北京市</a> · <a href="#capacity-t1-bureau">市市场监管局</a> · <a href="#capacity-t1-district">朝阳区</a></p><p class="thread-path" data-path="capacity-t2" hidden><a href="#capacity-t2-national">国家</a> · <a href="#capacity-t2-beijing">北京市</a> · <a href="#capacity-t2-bureau">市市场监管局</a> · <a href="#capacity-t2-district">朝阳区</a></p></div>
+</section>
+
 <section class="source-card" data-source="国">
-<header><h3>国家</h3></header>
-<blockquote><p>健全和落实民主集中制，坚持科学决策、民主决策、依法决策。</p><p>统筹推进各领域基层党组织建设，增强党组织政治功能和组织功能，发挥党员先锋模范作用。</p></blockquote>
+<header><h3>国家</h3><a class="thread-back" href="#capacity-threads">返回线索</a></header>
+<blockquote><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-national" data-thread-target="capacity-t2">决策与队伍</span>健全和落实民主集中制，坚持科学决策、民主决策、依法决策。</p><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-national" data-thread-target="capacity-t1">党建与基层</span>统筹推进各领域基层党组织建设，增强党组织政治功能和组织功能，发挥党员先锋模范作用。</p></blockquote>
 </section>
 <section class="source-card" data-source="京">
-<header><h3>北京市</h3></header>
-<blockquote><p>增强基层党组织的政治功能和组织功能，推动各层级各领域党组织全面过硬，织密建强上下贯通、执行有力的组织体系。</p><p>坚持正确用人导向，选优配强各级领导班子，建设一支政治过硬、适应新时代要求、具备领导现代化建设能力的干部队伍</p></blockquote>
+<header><h3>北京市</h3><a class="thread-back" href="#capacity-threads">返回线索</a></header>
+<blockquote><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-beijing" data-thread-target="capacity-t1">党建与基层</span>增强基层党组织的政治功能和组织功能，推动各层级各领域党组织全面过硬，织密建强上下贯通、执行有力的组织体系。</p><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-beijing" data-thread-target="capacity-t2">决策与队伍</span>坚持正确用人导向，选优配强各级领导班子，建设一支政治过硬、适应新时代要求、具备领导现代化建设能力的干部队伍</p></blockquote>
 </section>
 <section class="source-card" data-source="局">
-<header><h3>市市场监管局</h3></header>
-<blockquote><p>将党的领导贯穿于规划实施的全过程、各领域、各环节。</p><p>深化基层市场监管所标准化规范化建设。</p><p>健全完善“选育管用”工作机制，培育市场监管高层次执法、科技、国际人才，打造德才兼备的高素质首都市场监管人才队伍。</p></blockquote>
+<header><h3>市市场监管局</h3><a class="thread-back" href="#capacity-threads">返回线索</a></header>
+<blockquote><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-bureau" data-thread-target="capacity-t1">党建与基层</span>将党的领导贯穿于规划实施的全过程、各领域、各环节。</p><p data-thread="capacity-t1"><span class="thread-tag">党建与基层</span>深化基层市场监管所标准化规范化建设。</p><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-bureau" data-thread-target="capacity-t2">决策与队伍</span>健全完善“选育管用”工作机制，培育市场监管高层次执法、科技、国际人才，打造德才兼备的高素质首都市场监管人才队伍。</p></blockquote>
 </section>
 <section class="source-card" data-source="朝">
-<header><h3>朝阳区</h3></header>
-<blockquote><p>树立选人用人正确导向，选拔忠诚干净担当的高素质专业化干部，完善干部考核评价体系，推动干部能上能下、能进能出。</p><p>聚焦增强基层党组织政治功能和组织功能，把握首都超大城市特点，坚持以高质量党建引领高质量发展，创新基层党建工作思路和模式，研究深化和完善党的基层组织体系建设工作，统筹推动各领域基层党建提质增效。</p></blockquote>
+<header><h3>朝阳区</h3><a class="thread-back" href="#capacity-threads">返回线索</a></header>
+<blockquote><p data-thread="capacity-t2"><span class="thread-tag" id="capacity-t2-district" data-thread-target="capacity-t2">决策与队伍</span>树立选人用人正确导向，选拔忠诚干净担当的高素质专业化干部，完善干部考核评价体系，推动干部能上能下、能进能出。</p><p data-thread="capacity-t1"><span class="thread-tag" id="capacity-t1-district" data-thread-target="capacity-t1">党建与基层</span>聚焦增强基层党组织政治功能和组织功能，把握首都超大城市特点，坚持以高质量党建引领高质量发展，创新基层党建工作思路和模式，研究深化和完善党的基层组织体系建设工作，统筹推动各领域基层党建提质增效。</p></blockquote>
 </section></div>
 </details>
 <details class="ledger" id="indicators">
@@ -332,8 +386,13 @@ const navigation = document.querySelector('.quick-nav');
 
 function openSection() {
     const section = document.getElementById(location.hash.slice(1));
-    if (section instanceof HTMLDetailsElement) {
-        section.open = true;
+    const panel = section?.closest('details');
+    if (panel) {
+        panel.open = true;
+    }
+    const thread = section?.dataset.threadTarget;
+    if (thread) {
+        markThread(panel, thread);
     }
     for (const link of navigation.querySelectorAll('a')) {
         if (link.hash === location.hash) {
@@ -345,7 +404,7 @@ function openSection() {
     section?.scrollIntoView({ block: 'start' });
 }
 
-navigation.addEventListener('click', event => {
+document.addEventListener('click', event => {
     const link = event.target.closest('a');
     if (link?.hash === location.hash) {
         event.preventDefault();
@@ -353,6 +412,34 @@ navigation.addEventListener('click', event => {
     }
 });
 window.addEventListener('hashchange', openSection);
+
+function markThread(task, active) {
+    if (active) {
+        task.dataset.threadActive = active;
+    } else {
+        delete task.dataset.threadActive;
+    }
+    for (const option of task.querySelectorAll('[data-select]')) {
+        option.setAttribute('aria-pressed', String(option.dataset.select === active));
+    }
+    for (const path of task.querySelectorAll('.thread-path')) {
+        path.hidden = path.dataset.path !== active;
+    }
+    for (const excerpt of task.querySelectorAll('blockquote [data-thread]')) {
+        excerpt.classList.toggle('thread-match', excerpt.dataset.thread.split(' ').includes(active));
+    }
+}
+
+for (const controls of document.querySelectorAll('.thread-controls')) {
+    controls.addEventListener('click', event => {
+        const button = event.target.closest('button');
+        if (!button) return;
+        const task = controls.closest('.task');
+        const selected = button.dataset.select;
+        markThread(task, selected !== task.dataset.threadActive ? selected : '');
+    });
+}
+
 if (location.hash) {
     openSection();
 }
