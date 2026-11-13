@@ -131,6 +131,34 @@ footer a{color:var(--wine);text-underline-offset:4px}
 .thread-back{display:none;margin-left:auto;font-size:14px}
 .task[data-thread-active] .thread-back{display:inline}
 .outline,.source-card .thread-tag{scroll-margin-top:16px}
+.executive{margin-bottom:29px;border:1px solid var(--line);border-radius:4px;scroll-margin-top:12px}
+.executive-header{padding:19px clamp(15px,4vw,29px);color:#fffbf3;background:#56232d;border-radius:3px 3px 0 0}
+.executive .executive-header h2{color:inherit}
+.executive-header p{margin-top:7px;font-size:14px;line-height:1.7;color:#f8e6d7}
+.executive-header .executive-lead{margin-top:11px;font-size:clamp(17px,3vw,21px);font-weight:700;color:#fff8ee}
+.executive-body{padding:15px clamp(12px,3vw,23px) 6px;background:#fffcf5}
+.executive h3{font:700 clamp(18px,3.6vw,22px)/1.3 var(--display);color:var(--wine)}
+.executive-targets-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.executive a{color:var(--wine);text-underline-offset:3px;font-size:14px}
+.executive-targets-head a{flex:none}
+.executive-targets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:9px 0 17px}
+.executive-targets div{background:#f1e8df;border-left:2px solid #a07372;padding:8px 10px}
+.executive-targets dt{font-size:14px;line-height:1.45;font-weight:600}
+.executive-targets dd{margin:3px 0 0;display:flex;align-items:baseline;gap:4px 9px;flex-wrap:wrap}
+.executive-targets strong{font:700 clamp(21px,4vw,28px)/1.18 var(--display);color:var(--wine)}
+.executive-targets span{font-size:13px;color:var(--muted)}
+.executive-agenda{margin:5px 0 0;padding:0;list-style:none}
+.executive-agenda li{display:grid;grid-template-columns:11.5em 1fr;gap:2px 14px;padding:10px 0;border-top:1px solid var(--line)}
+.executive-agenda h4{margin:0;font-size:15px;color:var(--wine)}
+.executive-agenda p{font-size:14px;line-height:1.6}
+.executive-agenda li div{grid-column:2;display:flex;gap:8px 14px;flex-wrap:wrap}
+@media(max-width:620px){
+ .executive{margin-bottom:22px}
+ .executive-targets{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .executive-targets div:first-child{grid-column:1/-1}
+ .executive-agenda li{grid-template-columns:1fr;gap:4px}
+ .executive-agenda li div{grid-column:1}
+}
 </style>
 </head>
 <body>
@@ -140,7 +168,44 @@ footer a{color:var(--wine);text-underline-offset:4px}
 <h1 class="cover-title"><span>朝阳区市场监管</span>“十五五”<br>规划备参</h1>
 <p class="cover-line">守心、守护、守底线，<span>创新、创造、创未来</span></p>
 </header>
-<section class="read" aria-labelledby="planning">
+<div class="read">
+<section class="executive" id="overview" aria-labelledby="overview-title">
+  <header class="executive-header">
+    <h2 id="overview-title">全局谋划与务虚议题</h2>
+    <p class="executive-lead">以党建统领市场监管，以良好市场环境服务朝阳高质量发展，以全链条监管守住安全底线。</p>
+    <p>围绕朝阳建设新质生产力融合发展示范区、国际消费中心城市主承载区和超大城市现代化治理典范区，把经营主体服务、市场秩序和民生安全纳入全局谋划。</p>
+  </header>
+  <div class="executive-body">
+    <div class="executive-targets-head">
+      <h3>朝阳区 2030 年规划目标</h3>
+      <a href="#indicators">查看指标</a>
+    </div>
+    <dl class="executive-targets">
+      <div><dt>每万人口高价值发明专利拥有量</dt><dd><strong>240 件左右</strong><span>预期性</span></dd></div>
+      <div><dt>食品安全抽检合格率</dt><dd><strong>&gt;98.7%</strong><span>约束性</span></dd></div>
+      <div><dt>药品抽检合格率</dt><dd><strong>&gt;99%</strong><span>约束性</span></dd></div>
+    </dl>
+    <h3 class="executive-agenda-title">提请班子研讨</h3>
+    <ul class="executive-agenda">
+      <li>
+        <h4>朝阳特色抓什么</h4>
+        <p>围绕经营主体全生命周期服务、重点商圈消费维权和知识产权服务，研究哪些场景优先形成朝阳做法。</p>
+        <div><a href="#development-threads">促发展</a><a href="#rights-threads">护权益</a></div>
+      </li>
+      <li>
+        <h4>安全资源优先投向哪里</h4>
+        <p>围绕食品药品抽检、重点产品和特种设备风险、重大活动保障，研究抽检力量、基层执法力量和跨部门协同如何安排。</p>
+        <div><a href="#order-threads">稳市场</a><a href="#quality-threads">强支撑</a></div>
+      </li>
+      <li>
+        <h4>跨板块任务如何统筹</h4>
+        <p>研究涉企检查、信用分级和诉求治理如何协同，明确牵头机制、基层市场监管所支撑和规划实施评估安排。</p>
+        <div><a href="#development-t2-district">综合监管</a><a href="#capacity-threads">固根基</a></div>
+      </li>
+    </ul>
+  </div>
+</section>
+<section aria-labelledby="planning">
 <h2 id="planning">四份规划原文</h2>
 <nav class="quick-nav" aria-label="页内目录"><a href="#development">促发展</a><a href="#rights">护权益</a><a href="#order">稳市场</a><a href="#quality">强支撑</a><a href="#capacity">固根基</a><a href="#indicators">指标</a></nav>
 
@@ -379,6 +444,7 @@ footer a{color:var(--wine);text-underline-offset:4px}
 </div>
 </details>
 </section>
+</div>
 <footer><a href="#top">返回顶部 ↑</a></footer>
 </main>
 <script>
